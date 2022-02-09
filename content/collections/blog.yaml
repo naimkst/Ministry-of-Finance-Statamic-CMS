@@ -1,0 +1,8 @@
+title: Blog
+revisions: false
+template: single-blog
+route: '/blog/{slug}'
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private

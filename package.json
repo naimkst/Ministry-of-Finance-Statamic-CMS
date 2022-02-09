@@ -6,13 +6,14 @@
         "watch": "mix watch",
         "watch-poll": "mix watch -- --watch-options-poll=1000",
         "hot": "mix watch --hot",
-        "production": "mix --production"
+        "production": "mix --production",
+        "css": "npx tailwindcss -i public/assets/style.css -o public/assets/css/style.css --watch"
     },
     "devDependencies": {
         "autoprefixer": "^10.4.0",
         "cross-env": "^7.0",
         "css-loader": "^5.2.7",
-        "laravel-mix": "^6.0",
+        "laravel-mix": "^6.0.41",
         "postcss": "^8.4.5",
         "postcss-import": "^14.0.1",
         "tailwindcss": "^3.0.7",

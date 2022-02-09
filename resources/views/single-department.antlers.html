@@ -1,0 +1,27 @@
+<div class="page-title-area bg-bg-one py-6 md:py-11">
+    <div class="container px-[15px] mx-auto">
+        <h2
+            class="relative font-nsa text-[32px] md:text-[50px] leading-[42px] md:leading-[65px] font-bold pl-[25px] text-white before:absolute before:bg-primary before:content before:w-2 before:h-full before:left-0 before:rounded">
+            {{ title }}</h2>
+    </div>
+</div>
+<div class="container px-[15px] mx-auto py-[80px]">
+    <nav class="w-full mb-2">
+        <ul class="list-reset flex flex-wrap text-color-one capitalize font-nsa font-medium text-[16px] lg:text-[20px]">
+            <li><a href="/" class="text-blue-600 hover:text-blue-700">Home</a></li>
+            <li><span class="text-gray-500 mx-2">/</span></li>
+            <!-- <li><a href="#" class="text-blue-600 hover:text-blue-700">General Supplies</a></li> -->
+            <!-- <li><span class="text-gray-500 mx-2">/</span></li> -->
+            <li class="text-primary">{{ title }}</li>
+        </ul>
+    </nav>
+    <h2 class="text-[26px] md:text-[32px] font-nsa font-bold capitalize text-color-one mb-4">{{ title }}</h2>
+    <div>
+        <img class="md:float-right mb-5 md:mb-12 md:ml-3 rounded-lg" src="{{ thumbnail }}"
+            alt="departments" />
+    </div>
+    <div class="content-wrap">
+        {{ content }}
+    </div>
+    
+</div>

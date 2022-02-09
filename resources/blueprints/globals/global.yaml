@@ -1,0 +1,184 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: logo
+        field:
+          mode: grid
+          container: assets
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          max_files: 1
+          display: Logo
+          type: assets
+          icon: assets
+          width: 33
+          listable: hidden
+          instructions_position: above
+      -
+        handle: phone
+        field:
+          input_type: text
+          antlers: false
+          default: '022978770'
+          display: Phone
+          type: text
+          icon: text
+          width: 33
+          listable: hidden
+          instructions_position: above
+      -
+        handle: email
+        field:
+          input_type: text
+          antlers: false
+          default: info@mof.ps
+          display: Email
+          type: text
+          icon: text
+          width: 33
+          listable: hidden
+          instructions_position: above
+      -
+        handle: address
+        field:
+          input_type: text
+          antlers: false
+          default: 'Al-Masayef, Ramallah - Palestine'
+          display: Address
+          type: text
+          icon: text
+          width: 33
+          listable: hidden
+          instructions_position: above
+      -
+        handle: working_hour
+        field:
+          input_type: text
+          antlers: false
+          default: 'Sunday - Thursday 9 am - 3 pm'
+          display: 'Working Hour'
+          type: text
+          icon: text
+          width: 33
+          listable: hidden
+          instructions_position: above
+      -
+        handle: copy_right_text
+        field:
+          input_type: text
+          antlers: false
+          default: 'All rights reserved. 2022 Ministry of Finance - State of Palestine'
+          display: 'Copy Right Text'
+          type: text
+          icon: text
+          width: 33
+          listable: hidden
+          instructions_position: above
+      -
+        handle: favicon
+        field:
+          mode: grid
+          container: assets
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          max_files: 1
+          display: Favicon
+          type: assets
+          icon: assets
+          width: 33
+          listable: hidden
+          instructions_position: above
+      -
+        handle: footer_logo
+        field:
+          mode: grid
+          container: assets
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          max_files: 1
+          display: 'Footer Logo'
+          type: assets
+          icon: assets
+          width: 33
+          listable: hidden
+          instructions_position: above
+      -
+        handle: quick_links_title
+        field:
+          input_type: text
+          antlers: false
+          default: 'Quick links'
+          display: 'Quick links Title'
+          type: text
+          icon: text
+          width: 33
+          listable: hidden
+          instructions_position: above
+      -
+        handle: affiliate_sites_title
+        field:
+          input_type: text
+          antlers: false
+          default: 'Affiliate Sites'
+          display: 'Affiliate Sites Title'
+          type: text
+          icon: text
+          width: 33
+          listable: hidden
+          instructions_position: above
+      -
+        handle: keep_in_touch_title
+        field:
+          input_type: text
+          antlers: false
+          default: 'Keep In Touch'
+          display: 'Keep In Touch Title'
+          type: text
+          icon: text
+          width: 33
+          listable: hidden
+          instructions_position: above
+      -
+        handle: subscription_description
+        field:
+          input_type: text
+          antlers: false
+          default: 'Subscribe to our mailing list to stay in touch with the latest news and events'
+          display: 'Subscription Description'
+          type: text
+          icon: text
+          width: 33
+          listable: hidden
+          instructions_position: above
+  social_media:
+    display: 'Social Media'
+    fields:
+      -
+        handle: instagram
+        field:
+          input_type: text
+          antlers: false
+          default: 'https://instagram.com'
+          display: Instagram
+          type: text
+          icon: text
+          width: 33
+          listable: hidden
+          instructions_position: above
+      -
+        handle: facebook
+        field:
+          input_type: text
+          antlers: false
+          default: 'https://facebook.com'
+          display: Facebook
+          type: text
+          icon: text
+          width: 33
+          listable: hidden
+          instructions_position: above

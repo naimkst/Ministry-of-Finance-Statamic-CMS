@@ -12,7 +12,7 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/site.js', 'public/js')
 
-mix.postCss('resources/css/tailwind.css', 'public/css', [
+mix.postCss('public/assets/style.css', 'public/assets/css/style.css', [
     require('postcss-import'),
     require('tailwindcss/nesting'),
     require('tailwindcss'),
@@ -21,6 +21,7 @@ mix.postCss('resources/css/tailwind.css', 'public/css', [
 if (mix.inProduction()) {
    mix.version();
 }
+
 
 /*
  |--------------------------------------------------------------------------

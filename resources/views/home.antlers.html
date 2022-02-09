@@ -1,263 +1,141 @@
-<div class="hero-area relative">
-    <div class="hero-slider">
-        <div class="single-slider bg-no-repeat bg-center  bg-cover pt-[80px] md:pt-[250px] pb-[170px] md:pb-[250px]" style="background-image: url('/assets/images/hero-image.jpg');">
+{{ home }}
+    {{ if type == "hero_section"}}
+        <div class="hero-area relative">
+            <div class="hero-slider">
+                {{ hero_slider }}
+                    <div class="single-slider bg-no-repeat bg-center  bg-cover pt-[80px] md:pt-[250px] pb-[170px] md:pb-[250px]" style="background-image: url('{{ slider_image }}');">
+                        <div class="container px-[15px] mx-auto">
+                            <div class="w-full xl:w-1/2 lg:w-8/12 md:w-10/12">
+                                <h1 class="relative font-nsa text-[32px] sm:text-[50px] leading-[42px] sm:leading-[65px] font-bold pl-[25px] text-white before:absolute before:bg-primary before:content before:w-2 before:h-full before:left-0 before:rounded">{{ slider_title }}</h1>
+                            </div>
+                        </div>
+                    </div>
+                {{ /hero_slider }}
+            </div>
+        </div>
+    {{ /if }}
+
+    {{ if type == "service_slider" }}
+        <div class="service-area -mt-[90px]">
             <div class="container px-[15px] mx-auto">
-                <div class="w-full xl:w-1/2 lg:w-8/12 md:w-10/12">
-                    <h1 class="relative font-nsa text-[32px] sm:text-[50px] leading-[42px] sm:leading-[65px] font-bold pl-[25px] text-white before:absolute before:bg-primary before:content before:w-2 before:h-full before:left-0 before:rounded">Welcome to the website of the ministry of finance - State of Palestine</h1>
+                <div class="service-slide">
+                    {{ service_slider_item }}
+                        <div class="group text-center rounded bg-white mx-2 px-1 py-5">
+                            <div class="w-[100px] h-[100px] rounded-full mx-auto flex justify-center items-center mb-4 transition group-hover:bg-primary">
+                                <img class="block max-w-[50px]  group-hover:hidden"  src="{{ icon }}" alt="school bus" />
+                                <img class="hidden max-w-[50px]  group-hover:block" src="{{ hover_icon }}" alt="school bus" />
+                            </div>
+                            <h3 class="text-[18px] lg:text-[20px] capitalize text-color-one font-semibold font-nsa transition group-hover:text-primary"><a href="{{ service_page_link }}">{{ service_title }}</a></h3>
+                        </div>
+                    {{ /service_slider_item }}
                 </div>
             </div>
         </div>
-        <div class="single-slider bg-no-repeat bg-center  bg-cover pt-[80px] md:pt-[250px] pb-[170px] md:pb-[250px]" style="background-image: url('/assets/images/hero-image.jpg');">
+    {{ /if }}
+
+
+    {{ if type == "news_area" }}
+        <div class="news-area py-[40px] md:py-[80px]">
             <div class="container px-[15px] mx-auto">
-                <div class="w-full xl:w-1/2 lg:w-8/12 md:w-10/12">
-                    <h1 class="relative font-nsa text-[32px] sm:text-[50px] leading-[42px] sm:leading-[65px] font-bold pl-[25px] text-white before:absolute before:bg-primary before:content before:w-2 before:h-full before:left-0 before:rounded">Welcome to the website of the ministry of finance - State of Palestine</h1>
+                <div class="max-w-[360px] mx-auto text-center mb-12">
+                    <h2 class="text-[32px] md:text-[42px] font-nsa font-bold capitalize text-color-one mb-2">{{ news_title }}</h2>
+                    <p class="text-[16px] md:text-[18px] leading-[24px] text-black">{{ news_slug }}</p>
+                </div>
+                <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
+                    {{ collection from="blog" limit="3" }}
+                        <div class="group bg-white rounded-[10px] transition hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.07)]">
+                            <div class="rounded-[10px] overflow-hidden ">
+                                <a href="{{ url }}" class="block relative z-10 before:absolute before:bg-[rgba(0,0,0,0.5)] before:content before:w-full before:h-full before:left-0 before:rounded before:top-0 before:z-20 before:opacity-0 before:transition group-hover:before:opacity-100">
+                                    <img class="w-full h-[290px] object-cover transition group-hover:scale-105" src="{{ thumbnail }}" alt="news-thumbnail">
+                                </a>
+                            </div>
+                            <div class="py-5 px-3">
+                                <span class="text-[16px] font-normal font-nsa text-color-one inline-block mb-[15px] transition group-hover:text-primary">{{ date }}</span>
+                                <h3 class="text-[20px] xl:text-[24px] leading-[36x] font-nsa font-semibold text-color-one mb-[15px] transition group-hover:text-primary"><a href="{{ url }}">{{ title }}</a></h3>
+                                <a href="{{ url }}" class="text-[16px] font-nsa text-color-one capitalize font-semibold transition group-hover:text-primary">Read more <i class="ml-1 text-[12px] fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    {{ /collection }}
+                </div>
+                <div class="text-center mt-11">
+                    <a href="{{ news_button_link }}" class="primary-btn transition hover:bg-primary text-white">{{ news_archive_button_text }}</a>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<div class="service-area -mt-[90px]">
-    <div class="container px-[15px] mx-auto">
-        <div class="service-slide">
-            <div class="group text-center rounded bg-white mx-2 px-1 py-5">
-                <div class="w-[100px] h-[100px] rounded-full mx-auto flex justify-center items-center mb-4 transition group-hover:bg-primary">
-                    <i class="text-[50px] transition leading-none group-hover:text-white flaticon-parthenon"></i>
+    {{ /if }}
+
+
+    {{ if type == "department_section" }}
+        <div class="departments-working-area py-[40px] md:py-[80px]">
+            <div class="container px-[15px] mx-auto">
+                <div class="section-header border-left mb-45">
+                    <div class="w-full lg:w-4/5 xl:w-1/2 2xl:w-1/3 mb-[45px]">
+                        <h2 class="relative font-nsa text-[32px] md:text-[42px] leading-[42px] md:leading-[55px] font-bold pl-[25px] text-color-one before:absolute before:bg-primary before:content before:w-2 before:h-full before:left-0 before:rounded">{{ department_title }}</h2>
+                    </div>
                 </div>
-                <h3 class="text-[18px] lg:text-[20px] capitalize text-bcolor font-semibold font-nsa transition group-hover:text-primary"><a href="#">Ministry of Finance</a></h3>
-            </div>
-            <div class="group text-center rounded bg-white mx-2 px-1 py-5">
-                <div class="w-[100px] h-[100px] rounded-full mx-auto flex justify-center items-center mb-4 transition group-hover:bg-primary">
-                    <i class="text-[50px] transition leading-none group-hover:text-white flaticon-briefcase"></i>
+                <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
+                    {{ collection from="departments" limit="3" }}
+                    <div class="group bg-white rounded-[10px] transition hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.07)]">
+                        <div class="rounded-[10px] overflow-hidden">
+                            <a href="{{ url }}" class="block relative z-10 before:absolute before:bg-[rgba(0,0,0,0.5)] before:content before:w-full before:h-full before:left-0 before:rounded before:top-0 before:z-20 before:opacity-0 before:transition group-hover:before:opacity-100">
+                                <img class="w-full h-[290px] object-cover transition group-hover:scale-110" src="{{ thumbnail }}" alt="news-thumbnail">
+                            </a>
+                        </div>
+                        <div class="py-5 px-3">
+                            <a href="{{ url }}" class="text-color-one font-semibold font-nsa text-[20px] 2xl:text-[24px] capitalize flex justify-between items-center transition group-hover:text-primary"><span>{{ title }}</span> <i class="icon fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    {{ /collection }}
                 </div>
-                <h3 class="text-[18px] lg:text-[20px] capitalize text-bcolor font-semibold font-nsa transition group-hover:text-primary"><a href="#">general budget</a></h3>
-            </div>
-            <div class="group text-center rounded bg-white mx-2 px-1 py-5">
-                <div class="w-[100px] h-[100px] rounded-full mx-auto flex justify-center items-center mb-4 transition group-hover:bg-primary">
-                    <i class="text-[50px] transition leading-none group-hover:text-white flaticon-factory"></i>
-                </div>
-                <h3 class="text-[18px] lg:text-[20px] capitalize text-bcolor font-semibold font-nsa transition group-hover:text-primary"><a href="#">public administrations</a></h3>
-            </div>
-            <div class="group text-center rounded bg-white mx-2 px-1 py-5">
-                <div class="w-[100px] h-[100px] rounded-full mx-auto flex justify-center items-center mb-4 transition group-hover:bg-primary">
-                    <i class="text-[50px] transition leading-none group-hover:text-white flaticon-school-bus"></i>
-                </div>
-                <h3 class="text-[18px] lg:text-[20px] capitalize text-bcolor font-semibold font-nsa transition group-hover:text-primary"><a href="#">E- Services</a></h3>
-            </div>
-            <div class="group text-center rounded bg-white mx-2 px-1 py-5">
-                <div class="w-[100px] h-[100px] rounded-full mx-auto flex justify-center items-center mb-4 transition group-hover:bg-primary">
-                    <i class="text-[50px] transition leading-none group-hover:text-white flaticon-parthenon"></i>
-                </div>
-                <h3 class="text-[18px] lg:text-[20px] capitalize text-bcolor font-semibold font-nsa transition group-hover:text-primary"><a href="#">Ministry of Finance</a></h3>
-            </div>
-            <div class="group text-center rounded bg-white mx-2 px-1 py-5">
-                <div class="w-[100px] h-[100px] rounded-full mx-auto flex justify-center items-center mb-4 transition group-hover:bg-primary">
-                    <i class="text-[50px] transition leading-none group-hover:text-white flaticon-briefcase"></i>
-                </div>
-                <h3 class="text-[18px] lg:text-[20px] capitalize text-bcolor font-semibold font-nsa transition group-hover:text-primary"><a href="#">general budget</a></h3>
-            </div>
-            <div class="group text-center rounded bg-white mx-2 px-1 py-5">
-                <div class="w-[100px] h-[100px] rounded-full mx-auto flex justify-center items-center mb-4 transition group-hover:bg-primary">
-                    <i class="text-[50px] transition leading-none group-hover:text-white flaticon-factory"></i>
-                </div>
-                <h3 class="text-[18px] lg:text-[20px] capitalize text-bcolor font-semibold font-nsa transition group-hover:text-primary"><a href="#">public administrations</a></h3>
-            </div>
-            <div class="group text-center rounded bg-white mx-2 px-1 py-5">
-                <div class="w-[100px] h-[100px] rounded-full mx-auto flex justify-center items-center mb-4 transition group-hover:bg-primary">
-                    <i class="text-[50px] transition leading-none group-hover:text-white flaticon-school-bus"></i>
-                </div>
-                <h3 class="text-[18px] lg:text-[20px] capitalize text-bcolor font-semibold font-nsa transition group-hover:text-primary"><a href="#">E- Services</a></h3>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="news-area py-[40px] md:py-[80px]">
-    <div class="container px-[15px] mx-auto">
-        <div class="max-w-[360px] mx-auto text-center mb-12">
-            <h2 class="text-[32px] md:text-[42px] font-nsa font-bold capitalize text-color-one mb-2">News & Media</h2>
-            <p class="text-[16px] md:text-[18px] leading-[24px] text-black">The latest news and press coverage of the Ministry's activities</p>
-        </div>
-        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
-            <div class="group bg-white rounded-[10px] transition hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.07)]">
-                <div class="rounded-[10px] overflow-hidden ">
-                    <a href="single-news.html" class="block relative z-10 before:absolute before:bg-[rgba(0,0,0,0.5)] before:content before:w-full before:h-full before:left-0 before:rounded before:top-0 before:z-20 before:opacity-0 before:transition group-hover:before:opacity-100">
-                        <img class="w-full transition group-hover:scale-105" src="/assets/images/news-image-1.jpg" alt="news-thumbnail">
-                    </a>
-                </div>
-                <div class="py-5 px-3">
-                    <span class="text-[16px] font-normal font-nsa text-color-one inline-block mb-[15px] transition group-hover:text-primary">July 24, 2022</span>
-                    <h3 class="text-[20px] xl:text-[24px] leading-[36x] font-nsa font-semibold text-color-one mb-[15px] transition group-hover:text-primary"><a href="single-news.html">The Ministry of Finance Receives A Delegation From The Syndicate Of Engineers</a></h3>
-                    <a href="single-news.html" class="text-[16px] font-nsa text-color-one capitalize font-semibold transition group-hover:text-primary">Read more <i class="ml-1 text-[12px] fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="group bg-white rounded-[10px] transition hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.07)]">
-                <div class="rounded-[10px] overflow-hidden ">
-                    <a href="single-news.html" class="block relative z-10 before:absolute before:bg-[rgba(0,0,0,0.5)] before:content before:w-full before:h-full before:left-0 before:rounded before:top-0 before:z-20 before:opacity-0 before:transition group-hover:before:opacity-100">
-                        <img class="w-full transition group-hover:scale-105" src="/assets/images/news-image-2.jpg" alt="news-thumbnail">
-                    </a>
-                </div>
-                <div class="py-5 px-3">
-                    <span class="text-[16px] font-normal font-nsa text-color-one inline-block mb-[15px] transition group-hover:text-primary">July 24, 2022</span>
-                    <h3 class="text-[20px] xl:text-[24px] leading-[36x] font-nsa font-semibold text-color-one mb-[15px] transition group-hover:text-primary"><a href="single-news.html">The Ministry of Finance Receives A Delegation From The Syndicate Of Engineers</a></h3>
-                    <a href="single-news.html" class="text-[16px] font-nsa text-color-one capitalize font-semibold transition group-hover:text-primary">Read more <i class="ml-1 text-[12px] fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="group bg-white rounded-[10px] transition hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.07)]">
-                <div class="rounded-[10px] overflow-hidden ">
-                    <a href="single-news.html" class="block relative z-10 before:absolute before:bg-[rgba(0,0,0,0.5)] before:content before:w-full before:h-full before:left-0 before:rounded before:top-0 before:z-20 before:opacity-0 before:transition group-hover:before:opacity-100">
-                        <img class="w-full transition group-hover:scale-105" src="/assets/images/news-image-3.jpg" alt="news-thumbnail">
-                    </a>
-                </div>
-                <div class="py-5 px-3">
-                    <span class="text-[16px] font-normal font-nsa text-color-one inline-block mb-[15px] transition group-hover:text-primary">July 24, 2022</span>
-                    <h3 class="text-[20px] xl:text-[24px] leading-[36x] font-nsa font-semibold text-color-one mb-[15px] transition group-hover:text-primary"><a href="single-news.html">The Ministry of Finance Receives A Delegation From The Syndicate Of Engineers</a></h3>
-                    <a href="single-news.html" class="text-[16px] font-nsa text-color-one capitalize font-semibold transition group-hover:text-primary">Read more <i class="ml-1 text-[12px] fas fa-arrow-right"></i></a>
+                <div class="text-center mt-11">
+                    <a href="{{ department_link }}" class="primary-btn transition hover:bg-primary text-white">{{ department_button_text }}</a>
                 </div>
             </div>
         </div>
-        <div class="text-center mt-11">
-            <a href="#" class="primary-btn transition hover:bg-primary text-white">News Archive</a>
-        </div>
-    </div>
-</div>
-<div class="departments-working-area py-[40px] md:py-[80px]">
-    <div class="container px-[15px] mx-auto">
-        <div class="section-header border-left mb-45">
-            <div class="w-full lg:w-4/5 xl:w-1/2 2xl:w-1/3 mb-[45px]">
-                <h2 class="relative font-nsa text-[32px] md:text-[42px] leading-[42px] md:leading-[55px] font-bold pl-[25px] text-color-one before:absolute before:bg-primary before:content before:w-2 before:h-full before:left-0 before:rounded">Departments working in the Ministry of Finance</h2>
-            </div>
-        </div>
-        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
-            <div class="group bg-white rounded-[10px] transition hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.07)]">
-                <div class="rounded-[10px] overflow-hidden">
-                    <a href="single-directorates.html" class="block relative z-10 before:absolute before:bg-[rgba(0,0,0,0.5)] before:content before:w-full before:h-full before:left-0 before:rounded before:top-0 before:z-20 before:opacity-0 before:transition group-hover:before:opacity-100">
-                        <img class="w-full transition group-hover:scale-110" src="/assets/images/departments-image-1.jpg" alt="news-thumbnail">
-                    </a>
+    {{ /if }}
+
+
+    {{ if type == "e_service" }}
+        <div class="e-services-area py-[40px] md:py-[80px] bg-no-repeat bg-center  bg-cover" style="background-image: url('/assets/images/e-services-bg.jpg');">
+            <div class="container px-[15px] mx-auto">
+                <div class="max-w-[360px] mx-auto text-center mb-12">
+                    <h2 class="text-[32px] md:text-[42px] font-nsa font-bold capitalize text-color-one mb-2">{{ e_service_title }}</h2>
+                    <p class="text-[16px] md:text-[18px] leading-[24px] text-black">{{ e-services_slug }}</p>
                 </div>
-                <div class="py-5 px-3">
-                    <a href="single-directorates.html" class="text-color-one font-semibold font-nsa text-[20px] 2xl:text-[24px] capitalize flex justify-between items-center transition group-hover:text-primary"><span>Property tax</span> <i class="icon fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="group bg-white rounded-[10px] transition hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.07)]">
-                <div class="rounded-[10px] overflow-hidden">
-                    <a href="single-directorates.html" class="block relative z-10 before:absolute before:bg-[rgba(0,0,0,0.5)] before:content before:w-full before:h-full before:left-0 before:rounded before:top-0 before:z-20 before:opacity-0 before:transition group-hover:before:opacity-100">
-                        <img class="w-full transition group-hover:scale-110" src="/assets/images/departments-image-2.jpg" alt="news-thumbnail">
-                    </a>
-                </div>
-                <div class="py-5 px-3">
-                    <a href="single-directorates.html" class="text-color-one font-semibold font-nsa text-[20px] 2xl:text-[24px] capitalize flex justify-between items-center transition group-hover:text-primary"><span>General supplies</span> <i class="icon fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="group bg-white rounded-[10px] transition hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.07)]">
-                <div class="rounded-[10px] overflow-hidden">
-                    <a href="single-directorates.html" class="block relative z-10 before:absolute before:bg-[rgba(0,0,0,0.5)] before:content before:w-full before:h-full before:left-0 before:rounded before:top-0 before:z-20 before:opacity-0 before:transition group-hover:before:opacity-100">
-                        <img class="w-full transition group-hover:scale-110" src="/assets/images/departments-image-3.jpg" alt="news-thumbnail">
-                    </a>
-                </div>
-                <div class="py-5 px-3">
-                    <a href="single-directorates.html" class="text-color-one font-semibold font-nsa text-[20px] 2xl:text-[24px] capitalize flex justify-between items-center transition group-hover:text-primary"><span>Customs and excise</span> <i class="icon fas fa-arrow-right"></i></a>
+                <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7">
+                    {{ collection from="e_services" limit='{ e-service_limit }' }}
+                        <a href="{{ url }}" class="group flex px-4 py-6 rounded bg-white transition hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.07)] hover:-translate-y-1.5 hover:bg-primary">
+                            <div class="xl:mr-5 mr-3 transition">
+                                <img class="block max-w-[45px]  group-hover:hidden"  src="{{ icon }}" alt="school bus" />
+                                <img class="hidden max-w-[45px]  group-hover:block" src="{{ hover_icon }}" alt="school bus" />
+                            </div>
+                            <div class="eservicesConetnt flex-1">
+                                <h3 class="text-[20px] xl:text-[24px] font-nsa font-bold text-color-one mb-[10px] capitalize group-hover:text-white">{{ title }}</h3>
+                               {{ content }}
+                            </div>
+                        </a>
+                    {{ /collection }}
                 </div>
             </div>
         </div>
-        <div class="text-center mt-11">
-            <a href="#" class="primary-btn transition hover:bg-primary text-white">View more</a>
-        </div>
-    </div>
-</div>
-<div class="e-services-area py-[40px] md:py-[80px] bg-no-repeat bg-center  bg-cover" style="background-image: url('/assets/images/e-services-bg.jpg');">
-    <div class="container px-[15px] mx-auto">
-        <div class="max-w-[360px] mx-auto text-center mb-12">
-            <h2 class="text-[32px] md:text-[42px] font-nsa font-bold capitalize text-color-one mb-2">E-services</h2>
-            <p class="text-[16px] md:text-[18px] leading-[24px] text-black">Electronic services provided by the Ministry of Finance in cooperation with various departments</p>
-        </div>
-        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7">
-            <a href="single-electronic-services.html" class="group flex px-4 py-6 rounded bg-white transition hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.07)] hover:-translate-y-1.5 hover:bg-primary">
-                <div class="xl:mr-5 mr-3 transition">
-                    <i class="flaticon-hand text-[35px] xl:text-[50px] leading-none text-primary group-hover:text-white"></i>
+    {{ /if }}
+
+    {{ if type == "counter_section" }}
+        <div class="counter-area mb-[40px] md:mb-[80px] bg-color-one py-6">
+            <div class="container px-[15px] mx-auto">
+                <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-2 gap-4">
+                    {{ counter_item }}
+                    <div class="text-center text-white">
+                        <div class="icon">
+                            <img class="mx-auto flaticon-bridge text-[36px] md:text-[60px] text-primary leading-none items-center" src="{{ icon }}" alt="school bus" />
+                        </div>
+                        <h4 class="font-nsa text-[14px] sm:text-[18px] xl:text-[24px] font-semibold capitalize mb-[10px] mt-5">{{ title }}</h4>
+                        <h3 class="font-poppins text-[18px] sm:text-[26px] xl:text-[40px] capitalize"><span class="counter">{{ counter_number }}</span>{{ percentage_or_million }}</h3>
+                    </div>
+                    {{ /counter_item }}
                 </div>
-                <div class="flex-1">
-                    <h3 class="text-[20px] xl:text-[24px] font-nsa font-bold text-color-one mb-[10px] capitalize group-hover:text-white">Payroll service</h3>
-                    <p class="text-[16px] leading-[24px] text-bcolor font-poppins group-hover:text-white">Boulevard bespoke izakaya, Ginza remarkable lovely tote bag none discerning sophisticated.</p>
-                </div>
-            </a>
-            <a href="single-electronic-services.html" class="group flex px-4 py-6 rounded bg-white transition hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.07)] hover:-translate-y-1.5 hover:bg-primary">
-                <div class="xl:mr-5 mr-3 transition">
-                    <i class="flaticon-taxes text-[35px] xl:text-[50px] leading-none text-primary group-hover:text-white"></i>
-                </div>
-                <div class="flex-1">
-                    <h3 class="text-[20px] xl:text-[24px] font-nsa font-bold text-color-one mb-[10px] capitalize group-hover:text-white">Tax service</h3>
-                    <p class="text-[16px] leading-[24px] text-bcolor font-poppins group-hover:text-white">Boulevard bespoke izakaya, Ginza remarkable lovely tote bag none discerning sophisticated.</p>
-                </div>
-            </a>
-            <a href="single-electronic-services.html" class="group flex px-4 py-6 rounded bg-white transition hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.07)] hover:-translate-y-1.5 hover:bg-primary">
-                <div class="xl:mr-5 mr-3 transition">
-                    <i class="flaticon-officer text-[35px] xl:text-[50px] leading-none text-primary group-hover:text-white"></i>
-                </div>
-                <div class="flex-1">
-                    <h3 class="text-[20px] xl:text-[24px] font-nsa font-bold text-color-one mb-[10px] capitalize group-hover:text-white">Customs and excise</h3>
-                    <p class="text-[16px] leading-[24px] text-bcolor font-poppins group-hover:text-white">Boulevard bespoke izakaya, Ginza remarkable lovely tote bag none discerning sophisticated.</p>
-                </div>
-            </a>
-            <a href="single-electronic-services.html" class="group flex px-4 py-6 rounded bg-white transition hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.07)] hover:-translate-y-1.5 hover:bg-primary">
-                <div class="xl:mr-5 mr-3 transition">
-                    <i class="flaticon-property text-[35px] xl:text-[50px] leading-none text-primary group-hover:text-white"></i>
-                </div>
-                <div class="flex-1">
-                    <h3 class="text-[20px] xl:text-[24px] font-nsa font-bold text-color-one mb-[10px] capitalize group-hover:text-white">Property taxes</h3>
-                    <p class="text-[16px] leading-[24px] text-bcolor font-poppins group-hover:text-white ">Boulevard bespoke izakaya, Ginza remarkable lovely tote bag none discerning sophisticated.</p>
-                </div>
-            </a>
-            <a href="single-electronic-services.html" class="group flex px-4 py-6 rounded bg-white transition hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.07)] hover:-translate-y-1.5 hover:bg-primary">
-                <div class="xl:mr-5 mr-3 transition">
-                    <i class="flaticon-fuel-pump text-[35px] xl:text-[50px] leading-none text-primary group-hover:text-white"></i>
-                </div>
-                <div class="flex-1">
-                    <h3 class="text-[20px] xl:text-[24px] font-nsa font-bold text-color-one mb-[10px] capitalize group-hover:text-white">Fuel prices</h3>
-                    <p class="text-[16px] leading-[24px] text-bcolor font-poppins group-hover:text-white">Boulevard bespoke izakaya, Ginza remarkable lovely tote bag none discerning sophisticated.</p>
-                </div>
-            </a>
-            <a href="single-electronic-services.html" class="group flex px-4 py-6 rounded bg-white transition hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.07)] hover:-translate-y-1.5 hover:bg-primary">
-                <div class="xl:mr-5 mr-3 transition">
-                    <i class="flaticon-document text-[35px] xl:text-[50px] leading-none text-primary group-hover:text-white"></i>
-                </div>
-                <div class="flex-1">
-                    <h3 class="text-[20px] xl:text-[24px] font-nsa font-bold text-color-one mb-[10px] capitalize group-hover:text-white">General inquiries</h3>
-                    <p class="text-[16px] leading-[24px] text-bcolor font-poppins group-hover:text-white">Boulevard bespoke izakaya, Ginza remarkable lovely tote bag none discerning sophisticated.</p>
-                </div>
-            </a>
-        </div>
-    </div>
-</div>
-<div class="counter-area mb-[40px] md:mb-[80px] bg-color-one py-6">
-    <div class="container px-[15px] mx-auto">
-        <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-2 gap-4">
-            <div class="text-center text-white">
-                <div class="icon">
-                    <i class="flaticon-bridge text-[36px] md:text-[60px] text-primary leading-none"></i>
-                </div>
-                <h4 class="font-nsa text-[14px] sm:text-[18px] xl:text-[24px] font-semibold capitalize mb-[10px]">Total disability</h4>
-                <h3 class="font-poppins text-[18px] sm:text-[26px] xl:text-[40px] capitalize"><span class="counter">6</span>%</h3>
-            </div>
-            <div class="text-center text-white">
-                <div class="icon">
-                    <i class="flaticon-nature text-[36px] md:text-[60px] text-primary leading-none"></i>
-                </div>
-                <h4 class="font-nsa text-[14px] sm:text-[18px] xl:text-[24px] font-semibold capitalize mb-[10px]">Public debt</h4>
-                <h3 class="font-poppins text-[18px] sm:text-[26px] xl:text-[40px] capitalize"><span class="counter">32</span>%</h3>
-            </div>
-            <div class="text-center text-white">
-                <div class="icon">
-                    <i class="flaticon-directions text-[36px] md:text-[60px] text-primary leading-none"></i>
-                </div>
-                <h4 class="font-nsa text-[14px] sm:text-[18px] xl:text-[24px] font-semibold capitalize mb-[10px]">Total expenses</h4>
-                <h3 class="font-poppins text-[18px] sm:text-[26px] xl:text-[40px] capitalize"><span class="counter">5</span>% Million</h3>
-            </div>
-            <div class="text-center text-white">
-                <div class="icon">
-                    <i class="flaticon-jogging text-[36px] md:text-[60px] text-primary leading-none"></i>
-                </div>
-                <h4 class="font-nsa text-[14px] sm:text-[18px] xl:text-[24px] font-semibold capitalize mb-[10px]">Total revenue</h4>
-                <h3 class="font-poppins text-[18px] sm:text-[26px] xl:text-[40px] capitalize"><span class="counter">62</span>Million</h3>
             </div>
         </div>
-    </div>
-</div>
+    {{ /if }}
+
+{{ /home }}

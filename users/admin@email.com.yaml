@@ -2,3 +2,10 @@ name: admin
 super: true
 id: 00dab2f0-a935-4acf-99ab-161b5e8bd365
 password_hash: $2y$10$zsylCIaDpBz7D.xVKq4FKeBR2EwMu1NKuhABcGaJj1dDmpNsWU5iu
+preferences:
+  assets:
+    assets:
+      mode: grid
+  collections:
+    pages:
+      after_save: continue_editing

@@ -1,0 +1,49 @@
+<div class="page-title-area bg-bg-one py-6 md:py-11">
+    <div class="container px-[15px] mx-auto">
+        <h2 class="relative font-nsa text-[32px] md:text-[50px] leading-[42px] md:leading-[65px] font-bold pl-[25px] text-white before:absolute before:bg-primary before:content before:w-2 before:h-full before:left-0 before:rounded">Electronic Services</h2>
+    </div>
+</div>
+<div class="container px-[15px] mx-auto py-[40px]  md:py-[80px]">
+    <nav class="w-full mb-2">
+        <ul class="list-reset flex flex-wrap text-color-one capitalize font-nsa font-medium text-[16px] lg:text-[20px]">
+          <li><a href="#" class="text-blue-600 hover:text-blue-700">Home</a></li>
+          <li><span class="text-gray-500 mx-2">/</span></li>
+          <li><a href="#" class="text-blue-600 hover:text-blue-700">Electronic Services</a></li>
+          <li><span class="text-gray-500 mx-2">/</span></li>
+          <li class="text-primary">Fuel prices</li>
+        </ul>
+    </nav>
+    <h2 class="text-[32px] md:text-[42px] font-nsa font-bold capitalize text-color-one mb-8">Fuel prices</h2>
+    <div class="max-w-[800px] p-2 md:p-6 bg-white mx-auto">
+        
+
+        <table class="table-auto border-collapse w-full">
+            {{ item_details }}
+              {{ if first && first_row_headers }}
+                <thead class="thead">
+                  <tr>
+                    {{ cells }}
+                      <th class="text-[14px] sm:text-[18px] font-poppins font-semibold text-primary px-2 py-3 border border-primary border-opacity-40">{{ value|markdown }}</th>
+                    {{ /cells }}
+                  </tr>
+                </thead>
+                <tbody>
+              {{ /if }}
+              {{ if !first && first_row_headers || !first_row_headers }}
+                {{ if first }}
+                  <tbody>
+                {{ /if }}
+                  <tr>
+                    {{ cells }}
+                      <td class="text-[14px] sm:text-[18px] font-poppins font-medium text-bcolor px-2 py-3 border border-primary border-opacity-40">{{ value|markdown }}</td>
+                    {{ /cells }}
+                  </tr>
+                {{ if last }}
+                  </tbody>
+                {{ /if }}
+              {{ /if }}
+            {{ /item_details }}
+          </table>
+
+    </div>
+</div>

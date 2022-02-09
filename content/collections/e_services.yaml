@@ -1,0 +1,7 @@
+title: 'E Services'
+revisions: false
+template: single-service
+route: '/service/{slug}'
+date_behavior:
+  past: public
+  future: private

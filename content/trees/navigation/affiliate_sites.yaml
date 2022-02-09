@@ -1,0 +1,25 @@
+tree:
+  -
+    id: 64f469c2-d398-4188-a1ad-88fb1ed79739
+    title: 'Chair Office'
+    url: '#'
+  -
+    id: a77aa334-b56c-463e-935c-c28d5e44ccdb
+    title: Parliment
+    url: '#'
+  -
+    id: 375424a3-1164-463b-87e7-571cec42a17e
+    title: 'Ministry Of National Economy'
+    url: '#'
+  -
+    id: f8eb7471-6ddd-475c-aadd-4a0b1855c9f7
+    title: 'Monetary Authority'
+    url: '#'
+  -
+    id: 344fcfd9-f176-4561-a417-83bde859bd51
+    title: 'Council Of Ministers'
+    url: '#'
+  -
+    id: 1f407d07-70e6-410e-9fb1-86f49582f936
+    title: 'Ministry Of Interior Affairs'
+    url: '#'

@@ -1,0 +1,358 @@
+title: Home
+sections:
+  home:
+    display: Home
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: home
+        field:
+          always_show_set_button: false
+          sets:
+            hero_section:
+              display: 'Hero Section'
+              fields:
+                -
+                  handle: hero_slider
+                  field:
+                    collapse: false
+                    sets:
+                      add_slider:
+                        display: 'Add Slider'
+                        fields:
+                          -
+                            handle: slider_title
+                            field:
+                              input_type: text
+                              antlers: false
+                              default: 'Welcome to the website of the ministry of finance - State of Palestine'
+                              display: 'Slider Title'
+                              type: text
+                              icon: text
+                              width: 50
+                              listable: hidden
+                              instructions_position: above
+                          -
+                            handle: slider_image
+                            field:
+                              mode: grid
+                              container: assets
+                              restrict: false
+                              allow_uploads: true
+                              show_filename: true
+                              display: 'Slider Image'
+                              type: assets
+                              icon: assets
+                              width: 50
+                              listable: hidden
+                              instructions_position: above
+                              max_files: 1
+                    display: 'Hero Slider'
+                    type: replicator
+                    icon: replicator
+                    listable: hidden
+                    instructions_position: above
+            service_slider:
+              display: 'Service Slider'
+              fields:
+                -
+                  handle: service_slider_item
+                  field:
+                    collapse: false
+                    sets:
+                      add_service:
+                        display: 'Add Service'
+                        fields:
+                          -
+                            handle: service_title
+                            field:
+                              input_type: text
+                              antlers: false
+                              default: 'Ministry of Finance'
+                              display: 'Service Title'
+                              type: text
+                              icon: text
+                              width: 50
+                              listable: hidden
+                              instructions_position: above
+                          -
+                            handle: service_page_link
+                            field:
+                              display: 'Service Page Link'
+                              type: link
+                              icon: link
+                              width: 50
+                              listable: hidden
+                              instructions_position: above
+                          -
+                            handle: icon
+                            field:
+                              mode: grid
+                              container: assets
+                              restrict: false
+                              allow_uploads: true
+                              show_filename: true
+                              max_files: 1
+                              display: Icon
+                              type: assets
+                              icon: assets
+                              listable: hidden
+                              instructions_position: above
+                              width: 50
+                          -
+                            handle: hover_icon
+                            field:
+                              mode: grid
+                              container: assets
+                              restrict: false
+                              allow_uploads: true
+                              show_filename: true
+                              max_files: 1
+                              display: 'Hover Icon'
+                              type: assets
+                              icon: assets
+                              listable: hidden
+                              instructions_position: above
+                              width: 50
+                    display: 'Service Slider Item'
+                    type: replicator
+                    icon: replicator
+                    listable: hidden
+                    instructions_position: above
+            news_area:
+              display: 'News Area'
+              fields:
+                -
+                  handle: news_title
+                  field:
+                    input_type: text
+                    antlers: false
+                    default: 'News & Media'
+                    display: 'News Title'
+                    type: text
+                    icon: text
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: news_slug
+                  field:
+                    input_type: text
+                    antlers: false
+                    default: 'The latest news and press coverage of the Ministry''s activities'
+                    display: 'News Slug'
+                    type: text
+                    icon: text
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: news_archive_button_text
+                  field:
+                    input_type: text
+                    antlers: false
+                    default: 'News Archive'
+                    display: 'News Archive Button Text'
+                    type: text
+                    icon: text
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: news_button_link
+                  field:
+                    display: 'News Button Link'
+                    type: link
+                    icon: link
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+            department_section:
+              display: 'Department Section'
+              fields:
+                -
+                  handle: department_title
+                  field:
+                    input_type: text
+                    antlers: false
+                    default: 'Departments working in the Ministry of Finance'
+                    display: 'Department Title'
+                    type: text
+                    icon: text
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: department_button_text
+                  field:
+                    input_type: text
+                    antlers: false
+                    default: 'View more'
+                    display: 'Department Button Text'
+                    type: text
+                    icon: text
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: department_link
+                  field:
+                    display: 'Department Link'
+                    type: link
+                    icon: link
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+            e_service:
+              display: 'E Service'
+              fields:
+                -
+                  handle: e_service_title
+                  field:
+                    input_type: text
+                    antlers: false
+                    default: E-Services
+                    display: 'E Service Title'
+                    type: text
+                    icon: text
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: e-services_slug
+                  field:
+                    input_type: text
+                    antlers: false
+                    default: 'Electronic services provided by the Ministry of Finance in cooperation with various departments'
+                    display: 'E-Services Slug'
+                    type: text
+                    icon: text
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: e-service_limit
+                  field:
+                    default: '6'
+                    display: 'E-Service Limit'
+                    type: integer
+                    icon: integer
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+            counter_section:
+              display: 'Counter Section'
+              fields:
+                -
+                  handle: counter_item
+                  field:
+                    collapse: false
+                    sets:
+                      add_counter:
+                        display: 'Add Counter'
+                        fields:
+                          -
+                            handle: icon
+                            field:
+                              mode: grid
+                              container: assets
+                              restrict: false
+                              allow_uploads: true
+                              show_filename: true
+                              max_files: 1
+                              display: Icon
+                              type: assets
+                              icon: assets
+                              width: 50
+                              listable: hidden
+                              instructions_position: above
+                          -
+                            handle: title
+                            field:
+                              input_type: text
+                              antlers: false
+                              default: 'Total Disability'
+                              display: Title
+                              type: text
+                              icon: text
+                              width: 50
+                              listable: hidden
+                              instructions_position: above
+                          -
+                            handle: counter_number
+                            field:
+                              default: '6'
+                              display: 'Counter Number'
+                              type: integer
+                              icon: integer
+                              width: 50
+                              listable: hidden
+                              instructions_position: above
+                          -
+                            handle: percentage_or_million
+                            field:
+                              input_type: text
+                              antlers: false
+                              default: '%'
+                              display: 'Percentage Or Million'
+                              type: text
+                              icon: text
+                              width: 50
+                              listable: hidden
+                              instructions_position: above
+                    display: 'Counter Item'
+                    type: replicator
+                    icon: replicator
+                    listable: hidden
+                    instructions_position: above
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+            - image
+            - table
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          enable_input_rules: true
+          enable_paste_rules: true
+          antlers: false
+          display: Home
+          type: bard
+          icon: bard
+          listable: hidden
+          instructions_position: above
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - pages
+          max_items: 1
+          listable: false
+          localizable: true

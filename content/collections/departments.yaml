@@ -1,0 +1,7 @@
+title: Departments
+revisions: false
+template: single-department
+route: '/department/{slug}'
+date_behavior:
+  past: public
+  future: private

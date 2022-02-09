@@ -19,3 +19,12 @@
 .tabs-nav li.active a  {
     @apply  text-primary
 }
+.content-wrap p  {
+    @apply  text-[16px] md:text-[18px] leading-[26px] md:leading-[30px] font-poppins font-medium text-bcolor mb-6
+}
+.eservicesConetnt p {
+    @apply text-[16px] leading-[24px] text-bcolor font-poppins group-hover:text-white
+}
+.thead tr p {
+    @apply font-semibold text-primary
+}
