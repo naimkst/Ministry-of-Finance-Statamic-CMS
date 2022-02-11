@@ -1,0 +1,48 @@
+title: 'Contact Us'
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: contact_right_map
+        field:
+          antlers: false
+          default: '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d846.7768422363823!2d35.203353!3d31.903680000000005!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb74a99a91d9a9955!2sH%20clinic%20Ramallah!5e0!3m2!1sen!2sbd!4v1644575017247!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>'
+          display: 'Contact Right Map'
+          type: textarea
+          icon: textarea
+          listable: hidden
+          instructions_position: above
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - pages
+          max_items: 1
+          listable: false
+          localizable: true
+      -
+        handle: template
+        field:
+          hide_partials: true
+          display: 'Template Field'
+          type: template
+          icon: template
+          listable: hidden
+          instructions_position: above

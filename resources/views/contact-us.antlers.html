@@ -1,0 +1,45 @@
+<div class="page-title-area bg-bg-one py-6 md:py-11">
+    <div class="container px-[15px] mx-auto">
+        <h2
+            class="relative font-nsa text-[32px] md:text-[50px] leading-[42px] md:leading-[65px] font-bold pl-[25px] text-white before:absolute before:bg-primary before:content before:w-2 before:h-full before:left-0 before:rounded">
+            {{ title }}</h2>
+    </div>
+</div>
+<div class="container px-[15px] mx-auto py-[40px] md:py-[80px]">
+    <nav class="w-full mb-2">
+        <ul class="list-reset flex flex-wrap text-color-one capitalize font-nsa font-medium text-[16px] lg:text-[20px]">
+            <li><a href="/" class="text-blue-600 hover:text-blue-700">Home</a></li>
+            <li><span class="text-gray-500 mx-2">/</span></li>
+            <li class="text-primary">{{ title }}</li>
+        </ul>
+    </nav>
+    <div class="contact-area">
+        <div class="grid grid-cols-1  md:grid-cols-2 gap-4">
+            <div>
+                <h2 class="text-[32px] md:text-[42px] font-nsa font-bold capitalize text-color-one mb-7">{{ title }}</h2>
+                <div class="flex items-center mb-2">
+                    <h4 class="text-[16px] lg:text-[20px] font-poppins font-medium text-color-one mr-3">Address :</h4>
+                    <p class="flex-1 font-poppins text-[16px] lg:text-[18px] landscape-[24px] text-bcolor">{{ address }}</p>
+                </div>
+                <div class="flex items-center mb-2">
+                    <h4 class="text-[16px] lg:text-[20px] font-poppins font-medium text-color-one mr-3">Working hours :
+                    </h4>
+                    <p class="flex-1 font-poppins text-[16px] lg:text-[18px] landscape-[24px] text-bcolor">{{ working_hour }}</p>
+                </div>
+                <div class="flex items-center mb-2">
+                    <h4 class="text-[16px] lg:text-[20px] font-poppins font-medium text-color-one mr-3">Tel :</h4>
+                    <p class="flex-1 font-poppins text-[16px] lg:text-[18px] landscape-[24px] text-bcolor"> {{ phone }}
+                    </p>
+                </div>
+                <div class="flex items-center mb-2">
+                    <h4 class="text-[16px] lg:text-[20px] font-poppins font-medium text-color-one mr-3">Email :</h4>
+                    <p class="flex-1 font-poppins text-[16px] lg:text-[18px] landscape-[24px] text-bcolor"> {{ email }}
+                    </p>
+                </div>
+            </div>
+            <div>
+                {{ contact_right_map }}
+            </div>
+        </div>
+    </div>
+</div>
