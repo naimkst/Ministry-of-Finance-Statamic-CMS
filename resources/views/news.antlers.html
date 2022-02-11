@@ -1,0 +1,87 @@
+<div class="page-title-area bg-bg-one py-6 md:py-11">
+    <div class="container px-[15px] mx-auto">
+        <h2
+            class="relative font-nsa text-[32px] md:text-[50px] leading-[42px] md:leading-[65px] font-bold pl-[25px] text-white before:absolute before:bg-primary before:content before:w-2 before:h-full before:left-0 before:rounded">
+            {{ title }}</h2>
+    </div>
+</div>
+<div class="container px-[15px] mx-auto py-[40px] md:py-[80px]">
+    <nav class="w-full mb-2">
+        <ul class="list-reset flex flex-wrap text-color-one capitalize font-nsa font-medium text-[16px] lg:text-[20px]">
+            <li><a href="/" class="text-blue-600 hover:text-blue-700">Home</a></li>
+            <li><span class="text-gray-500 mx-2">/</span></li>
+            <li class="text-primary">{{ title }}</li>
+        </ul>
+    </nav>
+    <div class="news-area">
+        <h2 class="text-[32px] md:text-[42px] font-nsa font-bold capitalize text-color-one mb-7">{{ title }}</h2>
+        {{ collection from="blog" paginate="true" limit='{ limit_suppy }' as="posts" }}
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
+            {{ if no_results }}
+            <p>Aww, there are no results.</p>
+            {{ /if }}
+
+            {{ posts }}
+            <div class="group bg-white rounded-[10px] transition hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.07)]">
+                <div class="rounded-[10px] overflow-hidden ">
+                    <a href="{{ url }}"
+                        class="block relative z-10 before:absolute before:bg-[rgba(0,0,0,0.5)] before:content before:w-full before:h-full before:left-0 before:rounded before:top-0 before:z-20 before:opacity-0 before:transition group-hover:before:opacity-100">
+                        <img class="w-full transition group-hover:scale-105" src="{{ thumbnail }}" alt="news-thumbnail">
+                    </a>
+                </div>
+                <div class="py-5 px-3">
+                    <span
+                        class="text-[16px] font-normal font-nsa text-color-one inline-block mb-[15px] transition group-hover:text-primary">{{
+                        date }}</span>
+                    <h3
+                        class="text-[20px] xl:text-[24px] leading-[36x] font-nsa font-semibold text-color-one mb-[15px] transition group-hover:text-primary">
+                        <a href="{{ url }}">{{ title }}</a>
+                    </h3>
+                    <a href="{{ url }}"
+                        class="text-[16px] font-nsa text-color-one capitalize font-semibold transition group-hover:text-primary">Read
+                        more <i class="ml-1 text-[12px] fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            {{ /posts }}
+        </div>
+        {{ paginate }}
+        {{ if links:segments }}
+            <div class="text-center mt-[30px] md:mt-[60px]">
+                <ul
+                    class="flex flex-wrap justify-center space-x-4 items-center max-w-[370px] h-[60px] rounded-[15px] mx-auto border text-[18px] leading-none font-poppins font-medium text-bcolor ">
+                   
+                    {{ if prev_page }}
+                    <li><a href="{{ prev_page }}" class="inline-block transition hover:text-color-one"><i
+                                class="fas fa-angle-left"></i></a></li>
+                    {{ else }}
+                    <li><a href="" class="inline-block transition hover:text-color-one"></i></a></li>
+                    {{ /if }}
+
+                    {{ links:segments }}
+
+                    {{ first }}
+                    {{ if page == current_page }}
+                    <li><a href="{{ url }}" class="inline-block text-color-one transition hover:text-color-one">{{ page
+                            }}</a></li>
+                    {{ else }}
+                    <li><a href="{{ url }}" class="inline-block transition hover:text-color-one">{{ page }}</a></li>
+                    {{ /if }}
+                    {{ /first }}
+
+                    {{ /links:segments }}
+
+                    {{ if next_page }}
+                    <li><a href="{{ next_page }}" class="inline-block transition hover:text-color-one"><i
+                                class="fas fa-angle-right"></i></a></li>
+                    {{ else }}
+                    <li><a href="" class="inline-block transition hover:text-color-one"></i></a></li>
+                    {{ /if }}
+                </ul>
+            </div>
+        {{ /if }}
+        {{ /paginate }}
+
+        {{ /collection }}
+
+    </div>
+</div>
