@@ -512,6 +512,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mb-2 {
   margin-bottom: 0.5rem;
 }
+.mb-7 {
+  margin-bottom: 1.75rem;
+}
 .mr-3 {
   margin-right: 0.75rem;
 }
@@ -556,9 +559,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .mb-1 {
   margin-bottom: 0.25rem;
-}
-.mb-7 {
-  margin-bottom: 1.75rem;
 }
 .mt-\[30px\] {
   margin-top: 30px;
@@ -611,9 +611,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-\[60px\] {
   height: 60px;
 }
-.h-\[4px\] {
-  height: 4px;
-}
 .max-h-0 {
   max-height: 0px;
 }
@@ -625,9 +622,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-6 {
   width: 1.5rem;
-}
-.w-\[30px\] {
-  width: 30px;
 }
 .min-w-\[200px\] {
   min-width: 200px;
@@ -694,11 +688,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .gap-8 {
   gap: 2rem;
 }
-.gap-7 {
-  gap: 1.75rem;
-}
 .gap-4 {
   gap: 1rem;
+}
+.gap-7 {
+  gap: 1.75rem;
 }
 .gap-3 {
   gap: 0.75rem;
@@ -792,10 +786,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-color-two {
   --tw-bg-opacity: 1;
   background-color: rgb(2 14 46 / var(--tw-bg-opacity));
-}
-.bg-bcolor {
-  --tw-bg-opacity: 1;
-  background-color: rgb(122 122 122 / var(--tw-bg-opacity));
 }
 .bg-cover {
   background-size: cover;
@@ -1409,10 +1399,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: 50%;
   }
 
-  .md\:w-\[60px\] {
-    width: 60px;
-  }
-
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1539,6 +1525,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:text-\[32px\] {
     font-size: 32px;
+  }
+
+  .lg\:text-\[18px\] {
+    font-size: 18px;
   }
 
   .lg\:leading-\[50px\] {
