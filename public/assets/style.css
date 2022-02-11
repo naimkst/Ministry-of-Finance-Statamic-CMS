@@ -22,6 +22,12 @@
 .content-wrap p  {
     @apply  text-[16px] md:text-[18px] leading-[26px] md:leading-[30px] font-poppins font-medium text-bcolor mb-6
 }
+.content-wrap ul li  {
+    @apply mb-5 pl-5 relative before:absolute before:content-['*'] before:ml-0.5 before:left-0 before:top-1
+}
+.content-wrap ul  {
+    @apply font-poppins text-[16px] font-medium text-bcolor
+}
 .eservicesConetnt p {
     @apply text-[16px] leading-[24px] text-bcolor font-poppins group-hover:text-white
 }
