@@ -1,6 +1,6 @@
 ---
 id: 6f7acb5f-c0a6-4aaa-8873-7f575cf3308f
-blueprint: pages
+blueprint: about
 title: 'About Us'
 author: 00dab2f0-a935-4acf-99ab-161b5e8bd365
 updated_by: 00dab2f0-a935-4acf-99ab-161b5e8bd365

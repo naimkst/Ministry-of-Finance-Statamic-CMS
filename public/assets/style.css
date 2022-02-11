@@ -25,6 +25,9 @@
 .content-wrap ul li  {
     @apply mb-5 pl-5 relative before:absolute before:content-['*'] before:ml-0.5 before:left-0 before:top-1
 }
+.content-wrap ul li a {
+    @apply transition duration-100 hover:text-primary
+}
 .content-wrap ul  {
     @apply font-poppins text-[16px] font-medium text-bcolor
 }
@@ -33,4 +36,13 @@
 }
 .thead tr p {
     @apply font-semibold text-primary
+}
+.financelist ul {
+    @apply font-poppins text-[16px] md:text-[18px] leading-6 text-bcolor p-5 pb-2 bg-white rounded-xl mb-5
+}
+.financelist ul li {
+    @apply mb-3 pl-5 relative before:absolute before:content-['*'] before:ml-0.5 before:left-0 before:top-1
+}
+.financelist ul li a {
+    @apply break-all transition hover:text-[#53BFFC]
 }

@@ -1,0 +1,121 @@
+title: 'Financial Report'
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: financial_tab_title
+        field:
+          input_type: text
+          antlers: false
+          default: 'Financial Reports'
+          display: 'Financial Tab Title'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+      -
+        handle: financial_report_items
+        field:
+          collapse: false
+          sets:
+            add_financial_report:
+              display: 'Add Financial Report'
+              fields:
+                -
+                  handle: financial_reports_title
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Financial Reports Tab Title'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                -
+                  handle: add_reports
+                  field:
+                    collapse: false
+                    sets:
+                      report_item:
+                        display: 'Report Item'
+                        fields:
+                          -
+                            handle: report_title
+                            field:
+                              input_type: text
+                              antlers: false
+                              display: 'Report Title'
+                              type: text
+                              icon: text
+                              listable: hidden
+                              instructions_position: above
+                              unless:
+                                no_tab: 'equals true'
+                          -
+                            handle: report_description
+                            field:
+                              container: assets
+                              restrict: false
+                              automatic_line_breaks: true
+                              automatic_links: false
+                              escape_markup: false
+                              smartypants: false
+                              antlers: false
+                              display: 'Report Description'
+                              type: markdown
+                              icon: markdown
+                              listable: hidden
+                              instructions_position: above
+                          -
+                            handle: report_title_link
+                            field:
+                              display: 'Report Title Link'
+                              type: link
+                              icon: link
+                              width: 50
+                              listable: hidden
+                              instructions_position: above
+                    display: 'Add Reports'
+                    type: replicator
+                    icon: replicator
+                    listable: hidden
+                    instructions_position: above
+          display: 'Financial Report Items'
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - pages
+          max_items: 1
+          listable: false
+          localizable: true
+      -
+        handle: template_field
+        field:
+          hide_partials: true
+          display: 'Template Field'
+          type: template
+          icon: template
+          listable: hidden
+          instructions_position: above

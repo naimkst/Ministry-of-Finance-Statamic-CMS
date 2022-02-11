@@ -1,0 +1,64 @@
+<div class="page-title-area bg-bg-one py-6 md:py-11">
+    <div class="container px-[15px] mx-auto">
+        <h2
+            class="relative font-nsa text-[32px] md:text-[50px] leading-[42px] md:leading-[65px] font-bold pl-[25px] text-white before:absolute before:bg-primary before:content before:w-2 before:h-full before:left-0 before:rounded">
+            {{ title }}</h2>
+    </div>
+</div>
+<div class="container px-[15px] mx-auto py-[40px] md:py-[80px]">
+    <nav class="w-full mb-8">
+        <ul class="list-reset flex flex-wrap text-color-one capitalize font-nsa font-medium text-[16px] lg:text-[20px]">
+            <li><a href="/" class="text-blue-600 hover:text-blue-700">Home</a></li>
+            <li><span class="text-gray-500 mx-2">/</span></li>
+            <!-- <li><a href="#" class="text-blue-600 hover:text-blue-700">Financial Reports</a></li> -->
+            <!-- <li><span class="text-gray-500 mx-2">/</span></li> -->
+            <li class="text-primary">{{ title }}</li>
+        </ul>
+    </nav>
+    <div x-data="{tab:'tabs-0'}">
+        <div class="flex flex-wrap">
+            <div class="w-full mb-[30px] md:m-0 md:w-1/3 lg:w-1/4">
+                <h3 class="bg-bg-one text-[18px] xl:text-[24px] font-semibold capitalize text-white px-5 py-4">{{ financial_tab_title }}</h3>
+                <div class="bg-bg-two py-2">
+
+                    {{ financial_report_items }}
+                    <a href="#" @click.prevent="tab = 'tabs-{{ index }}'"
+                        class="block font-nsa font-medium capitalize px-5 py-2 text-white text-[16px] xl:text-[20px]"
+                        :class="{'text-primary':tab==='tabs-{{ index }}'}">{{ financial_reports_title }}</a>
+                    {{ /financial_report_items }}
+
+                </div>
+            </div>
+            <div class="w-full md:w-2/3 lg:w-3/4 md:pl-5">
+                {{ financial_report_items }}
+                        <div x-show="tab === 'tabs-{{index}}'">
+                        <h2 class="text-color-one text-[26px] lg:text-[32px] font-semibold font-nsa capitalize mb-5">
+                            {{ financial_reports_title }}</h2>
+                        <div class="block" x-data="{selected:{{ index }}}">
+                            <ul class="block">
+                                {{ add_reports }}
+                                    <li class="relative">
+                                        <button type="button" class="text-left block mb-5 pl-5 relative before:absolute before:content-['*'] before:ml-0.5 before:left-0 before:top-1"
+                                            @click="selected !== {{ index }} ? selected = {{ index }} : selected = null">
+                                            {{ if report_title_link }}
+                                            <a href="{{ report_title_link }}" class="break-all transition hover:text-[#53BFFC]">{{ report_title }}</a>
+                                            {{ else }}
+                                            <span>{{ report_title }}</span>
+                                            {{ /if }}
+                                        </button>
+                                        <div class="financelist relative overflow-hidden transition-all max-h-0 duration-700"
+                                            x-ref="container1"
+                                            x-bind:style="selected == {{ index }} ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+                                            {{ report_description }}
+                                        </div>
+                                    </li>
+                                {{ /add_reports }}
+                            </ul>
+                        </div>
+                    </div>
+                {{ /financial_report_items }}
+                
+            </div>
+        </div>
+    </div>
+</div>
