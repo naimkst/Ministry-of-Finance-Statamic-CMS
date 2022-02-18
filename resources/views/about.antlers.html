@@ -1,13 +1,13 @@
 <div class="page-title-area bg-bg-one py-6 md:py-11">
     <div class="container px-[15px] mx-auto">
         <h2
-            class="relative font-nsa text-[32px] md:text-[50px] leading-[42px] md:leading-[65px] font-bold pl-[25px] text-white before:absolute before:bg-primary before:content before:w-2 before:h-full before:left-0 before:rounded">
+            class="relative font-nsa text-[32px] md:text-[50px] leading-[42px] md:leading-[65px] font-bold pl-[25px] rtl:pl-0 rtl:pr-[25px] text-white before:absolute before:bg-primary before:content before:w-2 before:h-full before:left-0 rtl:before:left-auto rtl:before:right-0 before:rounded">
             {{ title }}</h2>
     </div>
 </div>
 <div class="container px-[15px] mx-auto py-[40px] md:py-[80px]">
     <nav class="w-full mb-8">
-        <ul class="list-reset flex flex-wrap text-color-one capitalize font-nsa font-medium text-[16px] lg:text-[20px]">
+        <ul class="list-reset flex flex-wrap text-color-one capitalize font-nsa font-medium text-[16px] lg:text-[20px] dark:text-white">
             <li><a href="/" class="text-blue-600 hover:text-blue-700">Home</a></li>
             <li><span class="text-gray-500 mx-2">/</span></li>
             <!-- <li><a href="#" class="text-blue-600 hover:text-blue-700">About the Ministry</a></li> -->
@@ -30,12 +30,12 @@
                 </div>
             </div>
             
-            <div class="w-full md:w-2/3 lg:w-3/4 md:pl-5">
+            <div class="w-full md:w-2/3 lg:w-3/4 md:pl-5 rtl:md:pl-0 rtl:md:pr-5">
                 {{ about_items }}
                 <div x-show="tab === 'tab-{{index}}'">
                     <div class="grid gap-8 grid-cols-1 lg:grid-cols-2 ">
                         <div class="content-wrap">
-                            <h2 class="text-color-one text-[26px] lg:text-[32px] font-semibold font-nsa capitalize mb-4">
+                            <h2 class="text-color-one text-[26px] lg:text-[32px] font-semibold font-nsa capitalize mb-4 dark:text-white">
                                 {{ about_item_title }}
                             </h2>
                                 
