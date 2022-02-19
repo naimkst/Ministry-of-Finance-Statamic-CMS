@@ -1,5 +1,4 @@
 module.exports = {
-  darkMode: 'class',
   content: [
     './resources/**/*.antlers.html',
     './resources/**/*.blade.php',
