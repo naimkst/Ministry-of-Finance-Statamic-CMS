@@ -1,29 +1,29 @@
 <div class="page-title-area bg-bg-one py-6 md:py-11">
     <div class="container px-[15px] mx-auto">
         <h2
-            class="relative font-nsa text-[32px] md:text-[50px] leading-[42px] md:leading-[65px] font-bold pl-[25px] text-white before:absolute before:bg-primary before:content before:w-2 before:h-full before:left-0 before:rounded">
+            class="relative font-nsa text-[32px] md:text-[50px] leading-[42px] md:leading-[65px] font-bold pl-[25px] rtl:pl-0 rtl:pr-[25px] text-white before:absolute before:bg-primary before:content before:w-2 before:h-full before:left-0 rtl:before:left-auto rtl:before:right-0 before:rounded">
             {{ title }}</h2>
     </div>
 </div>
 <div class="container px-[15px] mx-auto py-[40px] md:py-[80px]">
     <nav class="w-full mb-2">
-        <ul class="list-reset flex flex-wrap text-color-one capitalize font-nsa font-medium text-[16px] lg:text-[20px]">
+        <ul class="list-reset flex flex-wrap text-color-one capitalize font-nsa font-medium text-[16px] lg:text-[20px] dark:text-[white]">
             <li><a href="/" class="text-blue-600 hover:text-blue-700">Home</a></li>
             <li><span class="text-gray-500 mx-2">/</span></li>
             <li class="text-primary">{{ title }}</li>
         </ul>
     </nav>
-    <h2 class="text-[32px] md:text-[42px] font-nsa font-bold capitalize text-color-one mb-8">{{ title }}</h2>
+    <h2 class="text-[32px] md:text-[42px] font-nsa font-bold capitalize text-color-one mb-8 dark:text-white">{{ title }}</h2>
     <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7">
         
         {{ collection from="e_services" limit='{ limit_suppy }' }}
-            <a href="{{ url }}" class="group flex px-4 py-6 rounded bg-white transition hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.07)] hover:-translate-y-1.5 hover:bg-primary">
-                <div class="xl:mr-5 mr-3 transition">
+            <a href="{{ url }}" class="group flex px-4 py-6 rounded bg-white transition hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.07)] hover:-translate-y-1.5 hover:bg-primary dark:bg-color-one">
+                <div class="xl:mr-5 mr-3 rtl:mr-0 rtl:ml-3 rtl:xl:mr-0 rtl:xl:ml-5 transition">
                     <img class="block max-w-[45px]  group-hover:hidden"  src="{{ icon }}" alt="school bus" />
                     <img class="hidden max-w-[45px]  group-hover:block" src="{{ hover_icon }}" alt="school bus" />
                 </div>
                 <div class="eservicesConetnt flex-1">
-                    <h3 class="text-[20px] xl:text-[24px] font-nsa font-bold text-color-one mb-[10px] capitalize group-hover:text-white">{{ title }}</h3>
+                    <h3 class="text-[20px] xl:text-[24px] font-nsa font-bold text-color-one mb-[10px] capitalize group-hover:text-white dark:text-white">{{ title }}</h3>
                     {{ content }}
                 </div>
             </a>

@@ -1,6 +1,6 @@
 <div class="page-title-area bg-bg-one py-6 md:py-11">
     <div class="container px-[15px] mx-auto">
-        <h2 class="relative font-nsa text-[32px] md:text-[50px] leading-[42px] md:leading-[65px] font-bold pl-[25px] text-white before:absolute before:bg-primary before:content before:w-2 before:h-full before:left-0 before:rounded">News & Media</h2>
+        <h2 class="relative font-nsa text-[32px] md:text-[50px] leading-[42px] md:leading-[65px] font-bold pl-[25px] rtl:pl-0 rtl:pr-[25px] text-white before:absolute before:bg-primary before:content before:w-2 before:h-full before:left-0 rtl:before:left-auto rtl:before:right-0 before:rounded">News & Media</h2>
     </div>
 </div>
 <div class="max-w-[1070px] px-[15px] mx-auto py-[40px] md:py-[80px]">
@@ -16,11 +16,11 @@
         <div class="content-wrap">
             <img class=" mb-5 rounded-lg w-full" src="{{ thumbnail }}" alt="news image" />
             <div class="flex justify-between items-center mb-3 mt-[40px]">
-                <span class="text-[16px] font-nsa font-normal text-color-one">{{ date }}</span>
+                <span class="text-[16px] font-nsa font-normal text-color-one dark:text-white">{{ date }}</span>
                 <!-- <a class="font-poppins font-[15px] font-semibold text-bg-one] flex" href="#"><img class="mr-3" src="/assets/images/comment.svg" alt="comment" /> 4 Comment</a> -->
             </div>
-            <h2 class="uppercase font-nsa text-[24px] lg:text-[32px] leading-[34px] lg:leading-[50px] text-color-one font-semibold mb-5">{{ title }}</h2>
-            <p class="text-[16px] md:text-[18px] leading-[26px] md:leading-[30px] font-poppins font-medium text-bcolor mb-6">
+            <h2 class="uppercase font-nsa text-[24px] lg:text-[32px] leading-[34px] lg:leading-[50px] text-color-one font-semibold mb-5  dark:text-white">{{ title }}</h2>
+            <p class="text-[16px] md:text-[18px] leading-[26px] md:leading-[30px] font-poppins font-medium text-bcolor mb-6  dark:text-white">
                 {{ content }}
             </p>
             

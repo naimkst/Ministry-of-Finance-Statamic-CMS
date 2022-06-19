@@ -1,13 +1,13 @@
 <div class="page-title-area bg-bg-one py-6 md:py-11">
     <div class="container px-[15px] mx-auto">
         <h2
-            class="relative font-nsa text-[32px] md:text-[50px] leading-[42px] md:leading-[65px] font-bold pl-[25px] text-white before:absolute before:bg-primary before:content before:w-2 before:h-full before:left-0 before:rounded">
+            class="relative font-nsa text-[32px] md:text-[50px] leading-[42px] md:leading-[65px] font-bold pl-[25px] rtl:pl-0 rtl:pr-[25px] text-white before:absolute before:bg-primary before:content before:w-2 before:h-full before:left-0 rtl:before:left-auto rtl:before:right-0 before:rounded">
             {{ title }}</h2>
     </div>
 </div>
 <div class="container px-[15px] mx-auto py-[40px] md:py-[80px]">
     <nav class="w-full mb-8">
-        <ul class="list-reset flex flex-wrap text-color-one capitalize font-nsa font-medium text-[16px] lg:text-[20px]">
+        <ul class="list-reset flex flex-wrap text-color-one capitalize font-nsa font-medium text-[16px] lg:text-[20px] dark:text-[white]">
             <li><a href="/" class="text-blue-600 hover:text-blue-700">Home</a></li>
             <li><span class="text-gray-500 mx-2">/</span></li>
             <!-- <li><a href="#" class="text-blue-600 hover:text-blue-700">Financial Reports</a></li> -->
@@ -29,16 +29,16 @@
 
                 </div>
             </div>
-            <div class="w-full md:w-2/3 lg:w-3/4 md:pl-5">
+            <div class="w-full md:w-2/3 lg:w-3/4 md:pl-5 rtl:pl-0 rtl:pr-5">
                 {{ financial_report_items }}
                         <div x-show="tab === 'tabs-{{index}}'">
-                        <h2 class="text-color-one text-[26px] lg:text-[32px] font-semibold font-nsa capitalize mb-5">
+                        <h2 class="text-color-one text-[26px] lg:text-[32px] font-semibold font-nsa capitalize mb-5 dark:text-white">
                             {{ financial_reports_title }}</h2>
                         <div class="block" x-data="{selected:{{ index }}}">
-                            <ul class="block">
+                            <ul class="block dark:text-white">
                                 {{ add_reports }}
                                     <li class="relative">
-                                        <button type="button" class="text-left block mb-5 pl-5 relative before:absolute before:content-['*'] before:ml-0.5 before:left-0 before:top-1"
+                                        <button type="button" class="text-left block mb-5 pl-5 relative before:absolute before:content-['*'] before:ml-0.5 before:left-0 before:top-1 rtl:before:left-auto rtl:before:right-0 rtl:before:ml-0 rtl:mr-0.5 rtl:pl-0 rtl:pr-5"
                                             @click="selected !== {{ index }} ? selected = {{ index }} : selected = null">
                                             {{ if report_title_link }}
                                             <a href="{{ report_title_link }}" class="break-all transition hover:text-[#53BFFC]">{{ report_title }}</a>

@@ -20,6 +20,11 @@ return [
             'locale' => 'en_US',
             'url' => '/',
         ],
+        // 'arabic' => [
+        //     'name' => config('app.name'),
+        //     'locale' => 'ar',
+        //     'url' => '/ar/',
+        // ]
 
     ],
 ];
