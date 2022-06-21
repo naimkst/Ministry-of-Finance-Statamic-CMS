@@ -77,7 +77,7 @@ home:
         type: department_section
         department_title: 'الإدارات العامة'
         department_button_text: 'عرض المزيد'
-        department_link: '#'
+        department_link: 'entry::9dff5c54-313b-4085-80e4-184dec0fcb25'
   -
     type: set
     attrs:
@@ -123,6 +123,6 @@ home:
   -
     type: paragraph
 updated_by: 00dab2f0-a935-4acf-99ab-161b5e8bd365
-updated_at: 1655793883
+updated_at: 1655797624
 ---
 Welcome to your new Statamic website.
