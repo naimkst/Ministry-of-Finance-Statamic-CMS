@@ -1,7 +1,7 @@
 ---
 id: home
 blueprint: home
-title: Home
+title: الرئيسية
 template: home
 home:
   -
@@ -11,7 +11,7 @@ home:
         type: hero_section
         hero_slider:
           -
-            slider_title: 'Welcome to the website of the ministry of finance - State of Palestine'
+            slider_title: 'أهلا بكم في موقع وزارة المالية - دولة فلسطين'
             slider_image: images/hero-image.jpg
             type: add_slider
             enabled: true
@@ -66,24 +66,24 @@ home:
     attrs:
       values:
         type: news_area
-        news_title: 'News & Media'
+        news_title: 'أخبار وميديا'
         news_slug: 'The latest news and press coverage of the Ministry''s activities'
-        news_archive_button_text: 'News Archive'
+        news_archive_button_text: 'أرشيف الأخبار'
         news_button_link: '#'
   -
     type: set
     attrs:
       values:
         type: department_section
-        department_title: 'Departments working in the Ministry of Finance'
-        department_button_text: 'View more'
+        department_title: 'الإدارات العامة'
+        department_button_text: 'عرض المزيد'
         department_link: '#'
   -
     type: set
     attrs:
       values:
         type: e_service
-        e_service_title: E-Services
+        e_service_title: 'الخدمات الالكترونية'
         e-services_slug: 'Electronic services provided by the Ministry of Finance in cooperation with various departments'
         e-service_limit: 6
   -
@@ -123,6 +123,6 @@ home:
   -
     type: paragraph
 updated_by: 00dab2f0-a935-4acf-99ab-161b5e8bd365
-updated_at: 1644409658
+updated_at: 1655793883
 ---
 Welcome to your new Statamic website.
