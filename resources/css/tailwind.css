@@ -6,3 +6,9 @@
 
 @import "tailwindcss/utilities";
 
+.department-content h3{
+  font-size: 25px;
+}
+.department-content h2{
+  font-size: 32px;
+}
