@@ -3,14 +3,14 @@ data:
   logo: images/logo.png
   phone: '022978770'
   email: info@mof.ps
-  address: 'Al-Masayef, Ramallah - Palestine'
-  working_hour: 'Sunday - Thursday 9 am - 3 pm'
-  copy_right_text: 'All rights reserved. 2022 Ministry of Finance - State of Palestine'
+  address: 'المصايف، رام الله، فلسطين'
+  working_hour: 'الأحد - للخميس 9 صباحاً - 3 مساءً'
+  copy_right_text: 'جميع الحقوق محفوظة 2022 وزارة المالية - دولة فلسطين'
   favicon: images/favicon.png
   footer_logo: images/white-logo.png
-  quick_links_title: 'Quick links'
-  affiliate_sites_title: 'Affiliate Sites'
-  keep_in_touch_title: 'Keep In Touch'
-  subscription_description: 'Subscribe to our mailing list to stay in touch with the latest news and events'
+  quick_links_title: 'روابط سريعة'
+  affiliate_sites_title: 'مواقع ذات صلة'
+  keep_in_touch_title: 'ابقى على تواصل'
+  subscription_description: 'اشترك في القائمة البريدية'
   instagram: 'https://instagram.com'
   facebook: 'https://facebook.com'
