@@ -1,337 +1,664 @@
 <!DOCTYPE html>
 <html class="no-js" lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Mof Responsive  HTML5 Template</title>
-    <meta name="description" content="Mof Responsive  HTML5 Template " />
-    <meta name="keywords" content="business,corporate, creative, woocommerach, design, gallery, minimal, modern, landing page, cv, designer, freelancer, html, one page, personal, portfolio, programmer, responsive, nft, p2p, vcard, one page" />
-    <meta name="author" content="Mof" />
-    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="/assets/css/flaticon.css" />
-    <link rel="stylesheet" href="/assets/css/plugins.css" />
-    <link href="/assets/css/style.css" rel="stylesheet" />
-    <style>
-        .hero-area .slick-arrow {
-            position: absolute;
-            bottom: 120px;
-            width: 26px;
-            height: 26px;
-            line-height: 24px;
-            border-radius: 50%;
-            border: 1px solid #ffffff;
-            color: #ffffff;
-            text-align: center;
-            z-index: 99;
-            cursor: pointer;
-        }
-        .hero-area .slick-arrow.slick-prev {
-            left: calc(50% - 25px);
-        }
-        .hero-area .slick-arrow.slick-next {
-            left: calc(50% + 25px);
-        }
-        .service-area .slick-dots {
-            text-align: center;
-            margin-top: 15px;
-        }
-        .service-area .slick-dots li {
-            display: inline-block;
-            margin: 0 5px;
-        }
-        .service-area .slick-dots li button {
-            padding: 0;
-            font-size: 0;
-            width: 10px;
-            height: 10px;
-            line-height: 1;
-            border-radius: 50%;
-            border: 1px solid #7A7A7A;
-            background: transparent;
-        }
-        .service-area .slick-dots li.slick-active button {
-            background-color: #D1B129;
-            border-color: #D1B129;
-        }
-    </style>
-</head>
-<body class="font-poppins bg-body-bg">
-    <script>
-        var darkMode = false;
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            darkMode = true;
-        }
-        if (localStorage.getItem('theme') === 'dark') {
-            darkMode = true;
-        } else if (localStorage.getItem('theme') === 'light') {
-            darkMode = false;
-        }
-        if (darkMode) {
-            document.body.classList.toggle('dark');
-        }
-        document.addEventListener('DOMContentLoaded', () => {
-            document.getElementById('themeToggle').addEventListener('click', () => {
-                document.body.classList.toggle('dark');
-                localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Mof Responsive HTML5 Template</title>
+        <meta name="description" content="Mof Responsive  HTML5 Template " />
+        <meta
+            name="keywords"
+            content="business,corporate, creative, woocommerach, design, gallery, minimal, modern, landing page, cv, designer, freelancer, html, one page, personal, portfolio, programmer, responsive, nft, p2p, vcard, one page"
+        />
+        <meta name="author" content="Mof" />
+        <link
+            rel="shortcut icon"
+            href="/assets/images/favicon.png"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="/assets/css/flaticon.css" />
+        <link rel="stylesheet" href="/assets/css/plugins.css" />
+        <link href="/assets/css/style.css" rel="stylesheet" />
+        <style>
+            .hero-area .slick-arrow {
+                position: absolute;
+                bottom: 120px;
+                width: 26px;
+                height: 26px;
+                line-height: 24px;
+                border-radius: 50%;
+                border: 1px solid #ffffff;
+                color: #ffffff;
+                text-align: center;
+                z-index: 99;
+                cursor: pointer;
+            }
+            .hero-area .slick-arrow.slick-prev {
+                left: calc(50% - 25px);
+            }
+            .hero-area .slick-arrow.slick-next {
+                left: calc(50% + 25px);
+            }
+            .service-area .slick-dots {
+                text-align: center;
+                margin-top: 15px;
+            }
+            .service-area .slick-dots li {
+                display: inline-block;
+                margin: 0 5px;
+            }
+            .service-area .slick-dots li button {
+                padding: 0;
+                font-size: 0;
+                width: 10px;
+                height: 10px;
+                line-height: 1;
+                border-radius: 50%;
+                border: 1px solid #7a7a7a;
+                background: transparent;
+            }
+            .service-area .slick-dots li.slick-active button {
+                background-color: #d1b129;
+                border-color: #d1b129;
+            }
+        </style>
+    </head>
+    <body class="font-poppins bg-body-bg">
+        <script>
+            var darkMode = false;
+            if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                darkMode = true;
+            }
+            if (localStorage.getItem("theme") === "dark") {
+                darkMode = true;
+            } else if (localStorage.getItem("theme") === "light") {
+                darkMode = false;
+            }
+            if (darkMode) {
+                document.body.classList.toggle("dark");
+            }
+            document.addEventListener("DOMContentLoaded", () => {
+                document
+                    .getElementById("themeToggle")
+                    .addEventListener("click", () => {
+                        document.body.classList.toggle("dark");
+                        localStorage.setItem(
+                            "theme",
+                            document.body.classList.contains("dark")
+                                ? "dark"
+                                : "light"
+                        );
+                    });
             });
-        });
-    </script>
-    <div class="bg-color-one py-5 hidden sm:block dark:bg-color-one">
-        <div class="container px-[15px] mx-auto flex justify-between">
-            <p class="text-[16px] font-nsa text-white m-0"><i class="text-primary mr-1 far fa-clock"></i> {{ date }}</p>
-            <ul class="flex justify-end	gap-4">
-                {{ if global:instagram }}
-                <li><a class="inline-block" href="{{ global:instagram }}"><img src="/assets/images/instagram.svg" alt="instagram" /></a></li>
-                {{ /if }}
+        </script>
+        <div class="bg-color-one py-5 hidden sm:block dark:bg-color-one">
+            <div class="container px-[15px] mx-auto flex justify-between">
+                <p class="text-[16px] font-nsa text-white m-0">
+                    <i class="text-primary mr-1 far fa-clock"></i> {{ date }}
+                </p>
+                <ul class="flex justify-end gap-4">
+                    {{ if global:instagram }}
+                    <li>
+                        <a class="inline-block" href="{{ global:instagram }}"
+                            ><img
+                                src="/assets/images/instagram.svg"
+                                alt="instagram"
+                        /></a>
+                    </li>
+                    {{ /if }} {{ if global:facebook }}
+                    <li>
+                        <a class="inline-block" href="{{ facebook }}"
+                            ><img
+                                src="/assets/images/facebook.svg"
+                                alt="facebook"
+                        /></a>
+                    </li>
+                    {{ /if }}
+                    <li class="relative" x-data="{id: 1}">
+                        <button
+                            class="inline-block"
+                            @click="$dispatch('open-dropdown',{id})"
+                        >
+                            <img
+                                class="max-w-[25px]"
+                                src="/assets/images/search.svg"
+                                alt="search"
+                            />
+                        </button>
+                        <div
+                            class="w-[280px] absolute right-0 rtl:right-auto rtl:left-0 top-[100%] z-[1026] p-1 bg-white rounded shadow-lg dark:bg-bg-two"
+                            x-data="{ open: false }"
+                            x-show="open"
+                            @open-dropdown.window="if ($event.detail.id == 1) open = true"
+                            @click.away="open = false"
+                        >
+                            <form action="#">
+                                <div class="relative">
+                                    <input
+                                        class="w-full h-[45px] p-[10px] rounded-none border shadow-none focus:outline-none focus:shadow-none focus:border-primary"
+                                        type="search"
+                                        name="search"
+                                        id="search"
+                                        placeholder="search here ..."
+                                    />
+                                    <button
+                                        class="absolute top-[50%] -translate-y-[50%] right-[10px] rtl:right-auto rtl:left-[10px] transition hover:text-primary"
+                                    >
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+                    <li>
+                        <button class="inline-block" id="themeToggle">
+                            <img
+                                class="max-w-[25px] hidden dark:block"
+                                src="/assets/images/power.svg"
+                                alt="power"
+                            />
+                            <img
+                                class="max-w-[25px] dark:hidden"
+                                src="/assets/images/moon.svg"
+                                alt="power"
+                            />
+                        </button>
+                    </li>
+                    <li class="relative" x-data="{id: 3}">
+                        <button
+                            class="inline-block"
+                            @click="$dispatch('open-dropdown',{id})"
+                        >
+                            <img
+                                class="max-w-[25px] object-cover"
+                                src="/assets/images/en.svg"
+                                alt="en"
+                            />
+                        </button>
+                        <div
+                            class="w-[160px] absolute right-0 rtl:right-auto rtl:left-0 top-[120%] z-[1026] p-2 bg-white rounded shadow-lg dark:bg-bg-two"
+                            x-data="{ open: false }"
+                            x-show="open"
+                            @open-dropdown.window="if ($event.detail.id == 3) open = true"
+                            @click.away="open = false"
+                        >
+                            <ul
+                                class="language-list text-[16px] font-medium capitalize text-bcolor"
+                            >
+                                {{ sites }}
+                                <li class="mb-1 last:mb-0">
+                                    <a
+                                        class="transition {{ site:handle === handle ?= 'text-primary' }}hover:text-hover"
+                                        href="{{ url }}"
+                                        >{{ handle }}</a
+                                    >
+                                </li>
+                                {{ /sites }}
+                                <!-- <li class="mb-1 last:mb-0"><a class="transition hover:text-hover" href="#">Arabic</a></li> -->
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <button
+                            type="button"
+                            class="js-font"
+                            data-size="normal"
+                        >
+                            <img src="/assets/images/aal.svg" alt="aal" />
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-                {{ if global:facebook }}
-                <li><a class="inline-block" href="{{ facebook }}"><img src="/assets/images/facebook.svg" alt="facebook" /></a></li>
-                {{ /if }}
-                <li class="relative" x-data="{id: 1}">
-                    <button class="inline-block"  @click="$dispatch('open-dropdown',{id})"><img class="max-w-[25px]" src="/assets/images/search.svg" alt="search" /></button>
-                    <div class="w-[280px] absolute right-0 rtl:right-auto rtl:left-0 top-[100%] z-[1026] p-1 bg-white rounded shadow-lg dark:bg-bg-two" x-data="{ open: false }"
-                    x-show="open"
-                    @open-dropdown.window="if ($event.detail.id == 1) open = true"
-                    @click.away="open = false">
-                        <form action="#">
-                            <div class="relative">
-                                <input class="w-full h-[45px] p-[10px] rounded-none border shadow-none focus:outline-none focus:shadow-none focus:border-primary" type="search" name="search" id="search" placeholder="search here ..." />
-                                <button class="absolute top-[50%] -translate-y-[50%] right-[10px] rtl:right-auto rtl:left-[10px] transition hover:text-primary"><i class="fas fa-search"></i></button>
+        <header
+            class="bg-white py-2 sticky top-0 z-[101] dark:bg-[rgba(8,23,61,0.75)]"
+        >
+            <div
+                class="container px-[15px] mx-auto flex justify-between items-center"
+            >
+                <a href="/" class="max-w-[150px] sm:max-w-[180px]">
+                    <img
+                        class="dark:hidden"
+                        src="/assets/images/logo.png"
+                        alt="logo"
+                    />
+                    <img
+                        class="hidden dark:block"
+                        src="/assets/images/white-logo.png"
+                        alt="logo"
+                    />
+                </a>
+                <nav class="hidden lg:block">
+                    <ul
+                        class="flex justify-end gap-3 xl:gap-x-6 text-[14px] xl:text-[16px] capitalize font-nsa text-bcolor font-semibold dark:text-white"
+                    >
+                        {{ nav:main_menu }}
+                        <li class="group relative">
+                            <a
+                                href="{{ url }}"
+                                class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary"
+                                >{{ title }}{{ if children }}<i
+                                    class="ml-1 rtl:ml-0 rtl:mr-1 fas fa-angle-down"
+                                ></i
+                                >{{ endif }}</a
+                            >
+                            {{ if children }}
+                            <div
+                                class="grid grid-cols-3 gap-4 w-[700px] m-auto absolute left-0 bg-white px-7 py-7 rounded-md shadow-md opacity-0 invisible group-hover:opacity-100 group-hover:visible dark:bg-color-one"
+                            >
+                                {{ children }}
+                                <div class="single-menu-list">
+                                    <h3
+                                        class="text-[16px] xl:text-[20px] capitalize font-nsa text-bcolor font-semibold mb-4 dark:text-white"
+                                    >
+                                        {{ title }}
+                                    </h3>
+                                    <ul
+                                        class="text-[14px] xl:text-[16px] capitalize font-nsa text-bcolor font-medium"
+                                    >
+                                        {{ if children }} {{ *recursive
+                                        children* }} {{ endif }}
+                                    </ul>
+                                </div>
+                                {{ /children }}
                             </div>
-                        </form>
-                    </div>
-                </li>
-                <li>
-                    <button class="inline-block" id="themeToggle">
-                        <img class="max-w-[25px] hidden dark:block" src="/assets/images/power.svg" alt="power" />
-                        <img class="max-w-[25px] dark:hidden" src="/assets/images/moon.svg" alt="power" />
+                            {{ endif }}
+                        </li>
+                        {{ /nav:main_menu }}
+                    </ul>
+                </nav>
+                <div class="lg:hidden flex items-center">
+                    <button class="mobile-menu-button dark:text-white">
+                        <i class="fas fa-bars"></i>
                     </button>
-                </li>
-                <li class="relative" x-data="{id: 3}">
-                    <button class="inline-block"  @click="$dispatch('open-dropdown',{id})"><img class="max-w-[25px] object-cover" src="/assets/images/en.svg" alt="en" /></button>
-                    <div class=" w-[160px] absolute right-0 rtl:right-auto rtl:left-0 top-[120%] z-[1026] p-2 bg-white rounded shadow-lg dark:bg-bg-two" x-data="{ open: false }"
-                    x-show="open"
-                    @open-dropdown.window="if ($event.detail.id == 3) open = true"
-                    @click.away="open = false">
-                        <ul class="language-list text-[16px] font-medium capitalize text-bcolor">
-                            {{ sites }}
-                            <li class="mb-1 last:mb-0"><a class="transition {{ site:handle === handle ?= 'text-primary' }}hover:text-hover" href="{{ url }}">{{ handle }}</a></li>
-                            {{ /sites }}
-                            <!-- <li class="mb-1 last:mb-0"><a class="transition hover:text-hover" href="#">Arabic</a></li> -->
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <button type="button" class="js-font" data-size="normal"><img src="/assets/images/aal.svg" alt="aal" /></button>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <header class="bg-white py-2 sticky top-0 z-[101]  dark:bg-[rgba(8,23,61,0.75)]">
-        <div class="container px-[15px] mx-auto flex justify-between items-center">
-            <a href="/" class="max-w-[150px] sm:max-w-[180px]">
-                <img class="dark:hidden" src="/assets/images/logo.png" alt="logo" />
-                <img class="hidden dark:block" src="/assets/images/white-logo.png" alt="logo" />
-            </a>
-            <nav class="hidden lg:block">
-                <ul class="flex justify-end gap-3 xl:gap-x-6 text-[14px] xl:text-[16px] capitalize font-nsa text-bcolor font-semibold dark:text-white">
-                    <li class="group static">
-                        <a href="about.html" class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary ">About the Ministry <i class="ml-1 rtl:ml-0 rtl:mr-1 fas fa-angle-down"></i></a>
-                        <div class="grid grid-cols-3 gap-4 max-w-[1024px] mx-auto absolute top-[100%] left-0 right-0 bg-white px-7 py-7 rounded-md shadow-md opacity-0 invisible group-hover:opacity-100 group-hover:visible dark:bg-color-one">
-                            <div class="single-menu-list">
-                                <h3 class="text-[16px] xl:text-[20px] capitalize font-nsa text-bcolor font-semibold mb-4 dark:text-white">mega menu title</h3>
-                                <ul class="text-[14px] xl:text-[16px] capitalize font-nsa text-bcolor font-medium">
-                                    <li class="mb-3 last:mb-0"><a class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary " href="#">mega menu</a></li>
-                                    <li class="mb-3 last:mb-0"><a class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary " href="#">mega menu</a></li>
-                                    <li class="mb-3 last:mb-0"><a class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary " href="#">mega menu</a></li>
-                                    <li class="mb-3 last:mb-0"><a class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary " href="#">mega menu</a></li>
-                                    <li class="mb-3 last:mb-0"><a class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary " href="#">mega menu</a></li>
-                                </ul>
-                            </div>
-                            <div class="single-menu-list">
-                                <h3 class="text-[16px] xl:text-[20px] capitalize font-nsa text-bcolor font-semibold mb-4 dark:text-white">mega menu title</h3>
-                                <ul class="text-[14px] xl:text-[16px] capitalize font-nsa text-bcolor font-medium">
-                                    <li class="mb-3 last:mb-0"><a class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary " href="#">mega menu</a></li>
-                                    <li class="mb-3 last:mb-0"><a class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary " href="#">mega menu</a></li>
-                                    <li class="mb-3 last:mb-0"><a class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary " href="#">mega menu</a></li>
-                                    <li class="mb-3 last:mb-0"><a class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary " href="#">mega menu</a></li>
-                                    <li class="mb-3 last:mb-0"><a class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary " href="#">mega menu</a></li>
-                                </ul>
-                            </div>
-                            <div class="single-menu-list">
-                                <h3 class="text-[16px] xl:text-[20px] capitalize font-nsa text-bcolor font-semibold mb-4 dark:text-white">mega menu title</h3>
-                                <ul class="text-[14px] xl:text-[16px] capitalize font-nsa text-bcolor font-medium">
-                                    <li class="mb-3 last:mb-0"><a class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary " href="#">mega menu</a></li>
-                                    <li class="mb-3 last:mb-0"><a class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary " href="#">mega menu</a></li>
-                                    <li class="mb-3 last:mb-0"><a class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary " href="#">mega menu</a></li>
-                                    <li class="mb-3 last:mb-0"><a class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary " href="#">mega menu</a></li>
-                                    <li class="mb-3 last:mb-0"><a class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary " href="#">mega menu</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <li><a href="public-budget.html" class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary ">Public Budget</a></li>
-                    <li><a href="financial-reports.html" class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary ">Financial Reports</a></li>
-                    <li><a href="general-supplies.html" class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary ">General Supplies</a></li>
-                    <li><a href="electronic-services.html" class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary ">Electronic Services</a></li>
-                    <li><a href="news.html" class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary ">news</a></li>
-                    <li><a href="contact.html" class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary ">Call Us</a></li>
-                </ul>
-            </nav>
-            <div class="lg:hidden flex items-center">
-                <button class="mobile-menu-button dark:text-white">
-                    <i class="fas fa-bars"></i>
-                </button>
+                </div>
             </div>
-        </div>
-        <div class="mobile-menu pt-[25px] hidden lg:hidden">
-            <div class="container px-[15px] mx-auto ">
-                <ul class="text-[16px] capitalize font-nsa text-bcolor font-semibold ">
-                    <li class="mb-2.5" x-data="{id: 2}">
-                        <a href="about.html" class="text-primary transition font-medium duration-100 dark:text-white hover:text-primary dark:hover:text-primary ">About the Ministry </a>
-                        <i class="float-right mt-1 mr-1.5 fas fa-angle-down hover:cursor-pointer dark:text-white rtl:mr-0 rtl:ml-1.5 rtl:float-left" @click="$dispatch('open-dropdown',{id})"></i>
-                        <div class="bg-white px-4 py-5 rounded-md shadow-md mt-2.5 dark:bg-color-one" x-data="{ open: false }" x-show="open" @open-dropdown.window="if ($event.detail.id == 2) open = true" @click.away="open = false">
-                            <div class="single-menu-list mb-5 last:mb-0">
-                                <h3 class="text-[16px] xl:text-[20px] capitalize font-nsa text-bcolor font-semibold mb-3 dark:text-white">mega menu title</h3>
-                                <ul class="text-[16px] capitalize font-nsa text-bcolor font-medium">
-                                    <li class="mb-2 last:mb-0"><a class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary " href="#">mega menu</a></li>
-                                    <li class="mb-2 last:mb-0"><a class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary " href="#">mega menu</a></li>
-                                    <li class="mb-2 last:mb-0"><a class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary " href="#">mega menu</a></li>
-                                    <li class="mb-2 last:mb-0"><a class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary " href="#">mega menu</a></li>
-                                    <li class="mb-2 last:mb-0"><a class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary " href="#">mega menu</a></li>
-                                </ul>
+            <div class="mobile-menu pt-[25px] hidden lg:hidden">
+                <div class="container px-[15px] mx-auto">
+                    <ul
+                        class="text-[16px] capitalize font-nsa text-bcolor font-semibold"
+                    >
+                        <li class="mb-2.5" x-data="{id: 2}">
+                            <a
+                                href="about.html"
+                                class="text-primary transition font-medium duration-100 dark:text-white hover:text-primary dark:hover:text-primary"
+                                >About the Ministry
+                            </a>
+                            <i
+                                class="float-right mt-1 mr-1.5 fas fa-angle-down hover:cursor-pointer dark:text-white rtl:mr-0 rtl:ml-1.5 rtl:float-left"
+                                @click="$dispatch('open-dropdown',{id})"
+                            ></i>
+                            <div
+                                class="bg-white px-4 py-5 rounded-md shadow-md mt-2.5 dark:bg-color-one"
+                                x-data="{ open: false }"
+                                x-show="open"
+                                @open-dropdown.window="if ($event.detail.id == 2) open = true"
+                                @click.away="open = false"
+                            >
+                                <div class="single-menu-list mb-5 last:mb-0">
+                                    <h3
+                                        class="text-[16px] xl:text-[20px] capitalize font-nsa text-bcolor font-semibold mb-3 dark:text-white"
+                                    >
+                                        mega menu title
+                                    </h3>
+                                    <ul
+                                        class="text-[16px] capitalize font-nsa text-bcolor font-medium"
+                                    >
+                                        <li class="mb-2 last:mb-0">
+                                            <a
+                                                class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary"
+                                                href="#"
+                                                >mega menu</a
+                                            >
+                                        </li>
+                                        <li class="mb-2 last:mb-0">
+                                            <a
+                                                class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary"
+                                                href="#"
+                                                >mega menu</a
+                                            >
+                                        </li>
+                                        <li class="mb-2 last:mb-0">
+                                            <a
+                                                class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary"
+                                                href="#"
+                                                >mega menu</a
+                                            >
+                                        </li>
+                                        <li class="mb-2 last:mb-0">
+                                            <a
+                                                class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary"
+                                                href="#"
+                                                >mega menu</a
+                                            >
+                                        </li>
+                                        <li class="mb-2 last:mb-0">
+                                            <a
+                                                class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary"
+                                                href="#"
+                                                >mega menu</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="single-menu-list mb-5 last:mb-0">
+                                    <h3
+                                        class="text-[16px] xl:text-[20px] capitalize font-nsa text-bcolor font-semibold mb-3 dark:text-white"
+                                    >
+                                        mega menu title
+                                    </h3>
+                                    <ul
+                                        class="text-[16px] capitalize font-nsa text-bcolor font-medium"
+                                    >
+                                        <li class="mb-2 last:mb-0">
+                                            <a
+                                                class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary"
+                                                href="#"
+                                                >mega menu</a
+                                            >
+                                        </li>
+                                        <li class="mb-2 last:mb-0">
+                                            <a
+                                                class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary"
+                                                href="#"
+                                                >mega menu</a
+                                            >
+                                        </li>
+                                        <li class="mb-2 last:mb-0">
+                                            <a
+                                                class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary"
+                                                href="#"
+                                                >mega menu</a
+                                            >
+                                        </li>
+                                        <li class="mb-2 last:mb-0">
+                                            <a
+                                                class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary"
+                                                href="#"
+                                                >mega menu</a
+                                            >
+                                        </li>
+                                        <li class="mb-2 last:mb-0">
+                                            <a
+                                                class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary"
+                                                href="#"
+                                                >mega menu</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="single-menu-list mb-5 last:mb-0">
+                                    <h3
+                                        class="text-[16px] xl:text-[20px] capitalize font-nsa text-bcolor font-semibold mb-3 dark:text-white"
+                                    >
+                                        mega menu title
+                                    </h3>
+                                    <ul
+                                        class="text-[16px] capitalize font-nsa text-bcolor font-medium"
+                                    >
+                                        <li class="mb-2 last:mb-0">
+                                            <a
+                                                class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary"
+                                                href="#"
+                                                >mega menu</a
+                                            >
+                                        </li>
+                                        <li class="mb-2 last:mb-0">
+                                            <a
+                                                class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary"
+                                                href="#"
+                                                >mega menu</a
+                                            >
+                                        </li>
+                                        <li class="mb-2 last:mb-0">
+                                            <a
+                                                class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary"
+                                                href="#"
+                                                >mega menu</a
+                                            >
+                                        </li>
+                                        <li class="mb-2 last:mb-0">
+                                            <a
+                                                class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary"
+                                                href="#"
+                                                >mega menu</a
+                                            >
+                                        </li>
+                                        <li class="mb-2 last:mb-0">
+                                            <a
+                                                class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary"
+                                                href="#"
+                                                >mega menu</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="single-menu-list mb-5 last:mb-0">
-                                <h3 class="text-[16px] xl:text-[20px] capitalize font-nsa text-bcolor font-semibold mb-3 dark:text-white">mega menu title</h3>
-                                <ul class="text-[16px] capitalize font-nsa text-bcolor font-medium">
-                                    <li class="mb-2 last:mb-0"><a class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary " href="#">mega menu</a></li>
-                                    <li class="mb-2 last:mb-0"><a class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary " href="#">mega menu</a></li>
-                                    <li class="mb-2 last:mb-0"><a class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary " href="#">mega menu</a></li>
-                                    <li class="mb-2 last:mb-0"><a class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary " href="#">mega menu</a></li>
-                                    <li class="mb-2 last:mb-0"><a class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary " href="#">mega menu</a></li>
-                                </ul>
-                            </div>
-                            <div class="single-menu-list mb-5 last:mb-0">
-                                <h3 class="text-[16px] xl:text-[20px] capitalize font-nsa text-bcolor font-semibold mb-3 dark:text-white">mega menu title</h3>
-                                <ul class="text-[16px] capitalize font-nsa text-bcolor font-medium">
-                                    <li class="mb-2 last:mb-0"><a class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary " href="#">mega menu</a></li>
-                                    <li class="mb-2 last:mb-0"><a class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary " href="#">mega menu</a></li>
-                                    <li class="mb-2 last:mb-0"><a class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary " href="#">mega menu</a></li>
-                                    <li class="mb-2 last:mb-0"><a class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary " href="#">mega menu</a></li>
-                                    <li class="mb-2 last:mb-0"><a class="transition duration-100 py-[25px] dark:text-white hover:text-primary dark:hover:text-primary " href="#">mega menu</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="mb-2.5"><a href="public-budget.html" class="transition font-medium duration-100 dark:text-white hover:text-primary dark:hover:text-primary ">Public Budget</a></li>
-                    <li class="mb-2.5"><a href="financial-reports.html" class="transition font-medium duration-100 dark:text-white hover:text-primary dark:hover:text-primary ">Financial Reports</a></li>
-                    <li class="mb-2.5"><a href="general-supplies.html" class="transition font-medium duration-100 dark:text-white hover:text-primary dark:hover:text-primary ">General Supplies</a></li>
-                    <li class="mb-2.5"><a href="electronic-services.html" class="transition font-medium duration-100 dark:text-white hover:text-primary dark:hover:text-primary ">Electronic Services</a></li>
-                    <li class="mb-2.5"><a href="news.html" class="transition font-medium duration-100 dark:text-white hover:text-primary dark:hover:text-primary ">news</a></li>
-                    <li class="mb-2.5"><a href="contact.html" class="transition font-medium duration-100 dark:text-white hover:text-primary dark:hover:text-primary ">Call Us</a></li>
-                </ul>
+                        </li>
+                        <li class="mb-2.5">
+                            <a
+                                href="public-budget.html"
+                                class="transition font-medium duration-100 dark:text-white hover:text-primary dark:hover:text-primary"
+                                >Public Budget</a
+                            >
+                        </li>
+                        <li class="mb-2.5">
+                            <a
+                                href="financial-reports.html"
+                                class="transition font-medium duration-100 dark:text-white hover:text-primary dark:hover:text-primary"
+                                >Financial Reports</a
+                            >
+                        </li>
+                        <li class="mb-2.5">
+                            <a
+                                href="general-supplies.html"
+                                class="transition font-medium duration-100 dark:text-white hover:text-primary dark:hover:text-primary"
+                                >General Supplies</a
+                            >
+                        </li>
+                        <li class="mb-2.5">
+                            <a
+                                href="electronic-services.html"
+                                class="transition font-medium duration-100 dark:text-white hover:text-primary dark:hover:text-primary"
+                                >Electronic Services</a
+                            >
+                        </li>
+                        <li class="mb-2.5">
+                            <a
+                                href="news.html"
+                                class="transition font-medium duration-100 dark:text-white hover:text-primary dark:hover:text-primary"
+                                >news</a
+                            >
+                        </li>
+                        <li class="mb-2.5">
+                            <a
+                                href="contact.html"
+                                class="transition font-medium duration-100 dark:text-white hover:text-primary dark:hover:text-primary"
+                                >Call Us</a
+                            >
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </header>
+        </header>
 
         {{ template_content }}
 
-    <footer class="bg-color-one">
-        <div class="py-5 border-b border-solid border-[#7A7A7A]">
-            <div class="container px-[15px] mx-auto">
-                <div class="flex flex-wrap">
-                    <div class="w-full lg:w-3/4 mb-[25px] lg:mb-0">
-                        <nav>
-                            <ul class="flex flex-wrap text-[16px] font-nsa text-white font-medium justify-center lg:justify-start">
-                                {{ nav:footer_top_menu }}
-                                    <li class="mx-2 my-1"><a href="{{ url }}" class="{{ if is_current }} text-primary {{ endif }} transition duration-100 hover:text-primary">{{ title }}</a></li>
-                                {{ /nav:footer_top_menu }}
+        <footer class="bg-color-one">
+            <div class="py-5 border-b border-solid border-[#7A7A7A]">
+                <div class="container px-[15px] mx-auto">
+                    <div class="flex flex-wrap">
+                        <div class="w-full lg:w-3/4 mb-[25px] lg:mb-0">
+                            <nav>
+                                <ul
+                                    class="flex flex-wrap text-[16px] font-nsa text-white font-medium justify-center lg:justify-start"
+                                >
+                                    {{ nav:footer_top_menu }}
+                                    <li class="mx-2 my-1">
+                                        <a
+                                            href="{{ url }}"
+                                            class="{{ if is_current }} text-primary {{ endif }} transition duration-100 hover:text-primary"
+                                            >{{ title }}</a
+                                        >
+                                    </li>
+                                    {{ /nav:footer_top_menu }}
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="w-full lg:w-1/4 self-center">
+                            <ul
+                                class="flex justify-center lg:justify-end gap-4"
+                            >
+                                {{ if instagram }}
+                                <li>
+                                    <a href="{{ instagram }}"
+                                        ><img
+                                            src="/assets/images/instagram.svg"
+                                            alt="instagram"
+                                    /></a>
+                                </li>
+                                {{ /if }} {{ if facebook }}
+                                <li>
+                                    <a href="{{ facebook }}"
+                                        ><img
+                                            src="/assets/images/facebook.svg"
+                                            alt="facebook"
+                                    /></a>
+                                </li>
+                                {{ /if }}
                             </ul>
-                        </nav>
-                    </div>
-                    <div class="w-full lg:w-1/4 self-center">
-                        <ul class="flex justify-center lg:justify-end	gap-4">
-                            {{ if instagram }}
-                            <li><a href="{{ instagram }}"><img src="/assets/images/instagram.svg" alt="instagram" /></a></li>
-                            {{ /if }}
-
-                            {{ if facebook }}
-                            <li><a href="{{ facebook }}"><img src="/assets/images/facebook.svg" alt="facebook" /></a></li>
-                            {{ /if }}
-                        </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="py-8 text-white">
-            <div class="container px-[15px] mx-auto ">
-                <div class="flex flex-wrap">
-                    <div class="xl:w-1/4 lg:w-1/3 md:w-1/2 w-full mb-5">
-                        {{ if footer_logo }}
-                        <a href="/" class="mb-5 block">
-                            <img src="{{ footer_logo }}" alt="logo" />
-                        </a>
-                        {{ /if }}
-                        {{ if address }}
-                        <h4 class="font-nsa text-[18px] font-bold text-bcolor mb-2">{{ address }} </h4>
-                        {{ /if }}
-                        <ul class="font-nsa text-[16px] font-normal text-bcolor leading-normal">
-                            {{ if working_hour }}
-                            <li class="mb-2"><span class="block text-white font-bold mr-1">Working hours:</span> {{ working_hour }}</li>
+            <div class="py-8 text-white">
+                <div class="container px-[15px] mx-auto">
+                    <div class="flex flex-wrap">
+                        <div class="xl:w-1/4 lg:w-1/3 md:w-1/2 w-full mb-5">
+                            {{ if footer_logo }}
+                            <a href="/" class="mb-5 block">
+                                <img src="{{ footer_logo }}" alt="logo" />
+                            </a>
+                            {{ /if }} {{ if address }}
+                            <h4
+                                class="font-nsa text-[18px] font-bold text-bcolor mb-2"
+                            >
+                                {{ address }}
+                            </h4>
                             {{ /if }}
-
-                            {{ if phone }}
-                            <li class="mb-2"><span class="text-white font-bold mr-1">Tel:</span> {{ phone }}</li>
-                            {{ /if }}
-
-                            {{ if email }}
-                            <li><span class="text-white font-bold mr-1">Email:</span> {{ email }}</li>
-                            {{ /if }}
-                        </ul>
-                    </div>
-                    <div class="xl:w-1/4 lg:w-1/3 md:w-1/2 w-full mb-5">
-                        <h3 class="text-[24px] font-nsa font-bold capitalize text-white mb-4">{{ quick_links_title }}</h3>
-                        <ul class="text-[18px] font-nsa font-medium capitalize text-white">
-                            {{ nav:quick_links }}
-                                <li class="mb-1.5"><a href="{{ url }}" class="transition-all hover:text-primary">{{ title }}</a></li>
-                            {{ /nav:quick_links }}
-                           
-                        </ul>
-                    </div>
-                    <div class="xl:w-1/4 lg:w-1/3 md:w-1/2 w-full mb-5">
-                        <h3 class="text-[24px] font-nsa font-bold capitalize text-white mb-4">{{ affiliate_sites_title }}</h3>
-                        <ul class="text-[18px] font-nsa font-medium capitalize text-white">
-                            {{ nav:affiliate_sites }}
-                                <li class="mb-1.5"><a href="{{ url }}" class="transition-all hover:text-primary">{{ title }}</a></li>
-                            {{ /nav:affiliate_sites }}
-                        </ul>
-                    </div>
-                    <div class="xl:w-1/4 lg:w-1/3 md:w-1/2 w-full mb-5">
-                        <h3 class="text-[24px] font-nsa font-bold capitalize text-white mb-4">{{ keep_in_touch_title }}</h3>
-                        <p class="mb-5">{{ subscription_description }}s</p>
-                        <form action="#">
-                            <div class="relative">
-                                <input type="email" class="w-full border border-solid border-bcolor h-[60px] p-2 pr-[140px]  md:p-3 font-nsa font-normal text-[14px] md:text-[18px] bg-transparent text-white rounded box-border shadow-none focus:outline-0 focus:shadow-none rtl:pr-[140px]" id="newsletter" name="newsletter" placeholder="Your mail">
-                                <button type="submit" class="absolute right-0 top-[50%] translate-y-[-50%] secondary-btn hover:bg-hover text-white">subscrive</button>
-                            </div>
-                        </form>
+                            <ul
+                                class="font-nsa text-[16px] font-normal text-bcolor leading-normal"
+                            >
+                                {{ if working_hour }}
+                                <li class="mb-2">
+                                    <span
+                                        class="block text-white font-bold mr-1"
+                                        >Working hours:</span
+                                    >
+                                    {{ working_hour }}
+                                </li>
+                                {{ /if }} {{ if phone }}
+                                <li class="mb-2">
+                                    <span class="text-white font-bold mr-1"
+                                        >Tel:</span
+                                    >
+                                    {{ phone }}
+                                </li>
+                                {{ /if }} {{ if email }}
+                                <li>
+                                    <span class="text-white font-bold mr-1"
+                                        >Email:</span
+                                    >
+                                    {{ email }}
+                                </li>
+                                {{ /if }}
+                            </ul>
+                        </div>
+                        <div class="xl:w-1/4 lg:w-1/3 md:w-1/2 w-full mb-5">
+                            <h3
+                                class="text-[24px] font-nsa font-bold capitalize text-white mb-4"
+                            >
+                                {{ quick_links_title }}
+                            </h3>
+                            <ul
+                                class="text-[18px] font-nsa font-medium capitalize text-white"
+                            >
+                                {{ nav:quick_links }}
+                                <li class="mb-1.5">
+                                    <a
+                                        href="{{ url }}"
+                                        class="transition-all hover:text-primary"
+                                        >{{ title }}</a
+                                    >
+                                </li>
+                                {{ /nav:quick_links }}
+                            </ul>
+                        </div>
+                        <div class="xl:w-1/4 lg:w-1/3 md:w-1/2 w-full mb-5">
+                            <h3
+                                class="text-[24px] font-nsa font-bold capitalize text-white mb-4"
+                            >
+                                {{ affiliate_sites_title }}
+                            </h3>
+                            <ul
+                                class="text-[18px] font-nsa font-medium capitalize text-white"
+                            >
+                                {{ nav:affiliate_sites }}
+                                <li class="mb-1.5">
+                                    <a
+                                        href="{{ url }}"
+                                        class="transition-all hover:text-primary"
+                                        >{{ title }}</a
+                                    >
+                                </li>
+                                {{ /nav:affiliate_sites }}
+                            </ul>
+                        </div>
+                        <div class="xl:w-1/4 lg:w-1/3 md:w-1/2 w-full mb-5">
+                            <h3
+                                class="text-[24px] font-nsa font-bold capitalize text-white mb-4"
+                            >
+                                {{ keep_in_touch_title }}
+                            </h3>
+                            <p class="mb-5">{{ subscription_description }}s</p>
+                            <form action="#">
+                                <div class="relative">
+                                    <input
+                                        type="email"
+                                        class="w-full border border-solid border-bcolor h-[60px] p-2 pr-[140px] md:p-3 font-nsa font-normal text-[14px] md:text-[18px] bg-transparent text-white rounded box-border shadow-none focus:outline-0 focus:shadow-none rtl:pr-[140px]"
+                                        id="newsletter"
+                                        name="newsletter"
+                                        placeholder="Your mail"
+                                    />
+                                    <button
+                                        type="submit"
+                                        class="absolute right-0 top-[50%] translate-y-[-50%] secondary-btn hover:bg-hover text-white"
+                                    >
+                                        subscrive
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="bg-color-two py-5">
-            <div class="container px-[15px] mx-auto">
-                <p class="text-center text-white font-nsa font-medium text-[16px]">All rights reserved.  2022    Ministry of Finance - State of Palestine </p>
+            <div class="bg-color-two py-5">
+                <div class="container px-[15px] mx-auto">
+                    <p
+                        class="text-center text-white font-nsa font-medium text-[16px]"
+                    >
+                        All rights reserved. 2022 Ministry of Finance - State of
+                        Palestine
+                    </p>
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
 
-    <!-- js file start here  -->
-    <script src="/assets/js/alpine.js"></script>
-    <script src="/assets/js/jquery-3.6.0.min.js"></script>
-    <script src="/assets/js/plugins.js"></script>
-    <script src="/assets/js/main.js"></script>
-</body>
+        <!-- js file start here  -->
+        <script src="/assets/js/alpine.js"></script>
+        <script src="/assets/js/jquery-3.6.0.min.js"></script>
+        <script src="/assets/js/plugins.js"></script>
+        <script src="/assets/js/main.js"></script>
+    </body>
 </html>
