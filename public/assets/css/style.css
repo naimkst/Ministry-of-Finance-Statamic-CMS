@@ -2455,7 +2455,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 /* Cutom CSS By Naim */
 .content-wrap.department-content h3 strong, .content-wrap.department-content h3 {
   font-size: 24px;
+  margin: 10px 0px;
 }
 .content-wrap.department-content h2 strong, .content-wrap.department-content h2 {
   font-size: 32px;
+  margin: 10px 0px;
 }
