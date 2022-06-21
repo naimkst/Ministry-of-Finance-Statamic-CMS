@@ -1,4 +1,4 @@
-title: 'General Supply'
+title: Departments
 sections:
   main:
     display: Main
@@ -11,13 +11,13 @@ sections:
           validate:
             - required
       -
-        handle: limit_suppy
+        handle: limit
         field:
-          default: '9'
-          display: 'Limit Suppy'
-          type: integer
-          icon: integer
-          width: 50
+          input_type: text
+          antlers: false
+          display: Limit
+          type: text
+          icon: text
           listable: hidden
           instructions_position: above
   sidebar:
@@ -37,12 +37,3 @@ sections:
           max_items: 1
           listable: false
           localizable: true
-      -
-        handle: template
-        field:
-          hide_partials: true
-          display: 'Template Field'
-          type: template
-          icon: template
-          listable: hidden
-          instructions_position: above
